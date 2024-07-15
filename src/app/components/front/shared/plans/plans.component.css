@@ -1,0 +1,62 @@
+.card .card-footer {
+    border: solid 0px;
+}
+
+.containerSwiper .card {
+    max-width: 350px;
+    margin: auto;
+}
+
+.showMore {
+    background: var(--gold-x-l);
+    border-top: 3px var(--gold-b) solid;
+    visibility: hidden;
+    color: var(--gold-b);
+    font-family: 'Poppins-regular';
+}
+
+
+/* esto para los del slider */
+
+.showMore.show {
+    visibility: visible;
+}
+
+.showMore:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.showMore:hover>.text-gold {
+    color: white !important;
+}
+
+.contentCard {
+    padding-bottom: 10px;
+}
+
+.overflowCard {
+    overflow: hidden;
+    transition-duration: 1s;
+}
+
+.overflowCard.limit {
+    height: 500px;
+}
+
+.show-less {
+    display: none;
+}
+
+.card-body {
+    padding-bottom: 0 !important;
+}
+
+@media (max-width:1140px) {
+    .overflowCard.limit {
+        height: 400px;
+    }
+}
+
+
+/* @media screen {} */

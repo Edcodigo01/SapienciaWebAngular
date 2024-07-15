@@ -1,0 +1,43 @@
+.circle {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 100%;
+    border: solid 8px white;
+    position: relative;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.zoomImg:hover>.circle img {
+    transform: scale(1.5);
+    transition-duration: 2s;
+}
+
+.bg-circle {
+    background: rgba(0, 0, 0, 0.226);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:1400px) {
+    .circle {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width:350px) {
+    .circle {
+        width: 210px;
+        height: 210px;
+    }
+}

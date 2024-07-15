@@ -1,0 +1,54 @@
+<div class="footer relative">
+    <img style="opacity:0.07;position:absolute;top:0;bottom:0;left:0;right:0;object-fit:cover;height:100%;width:100%;margin:auto" src="assets/img/default/logotipos/logo-background.png" alt="">
+    <div class="container2">
+        <div class="row auto" style="width: 100%;">
+            <div class="col-lg-9">
+                <h2 class="text-white-b2">Contacto</h2>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <h4 class="text-white-b2"> <i class="fas fa-map-marker-alt"></i> Oficina</h4>
+                            <p class="m-0 text-white-b2">Av. Mariana de Jesús y Jorge Juan, Quito - Ecuador</p>
+                        </div>
+                        <div class="form-group">
+                            <h4 (click)="goWhatsapp()" class="text-white-b2 hover"><i class="fab fa-whatsapp-square"></i> WhatsApp</h4>
+                            <p class="m-0 text-white-b2 hover" (click)="goWhatsapp(593989558833)"> +593-98-9558833</p>
+                            <p class="m-0 text-white-b2 hover" (click)="goWhatsapp(593979072010)"> +593-97-9072010</p>
+                            <p (click)="goWhatsapp()" class="m-0 text-white-b2 hover"><small>Click para abrir WhatsApp</small></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group hover" routerLink="/contactanos">
+                            <h4 class="text-white-b2"> <i class="fas fa-envelope"></i> Correo electrónico</h4>
+                            <p class="m-0 text-white-b2">sapienciawebmail@gmail.com</p>
+                        </div>
+                        <div class="form-group hover">
+                            <a href="https://www.instagram.com/sapiencia.web/" target="_blank">
+                                <h4 class="text-white-b2 hover"><i class="fab fa-instagram-square"></i> Instagram</h4>
+                                <p class="m-0 text-white-b2 hover"> sapiencia.web</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 hide-lg">
+                <h2 class="text-white-b2 mb-4">Menú</h2>
+                <h4 routerLink="/" class="text-white-b2 hover"> Inicio</h4>
+                <h4 routerLink="/servicios-y-planes" class="text-white-b2 hover"> Servicios y Planes</h4>
+                <h4 routerLink="/nosotros" class="text-white-b2 hover"> Nosotros</h4>
+                <h4 routerLink="/portafolio" class="text-white-b2 hover"> Portafolio</h4>
+                <h4 routerLink="/contactanos" class="text-white-b2 hover"> Contáctanos</h4>
+
+            </div>
+            <div class="col-12">
+                <div class=" text-center">
+                    <img class="logo-sap" src="assets/img/default/logotipos/logo-sap-blanco.png" alt="">
+                    <img class="text-sap" src="assets/img/default/logotipos/text-sap.png" alt="">
+                    <h5 class="text-white-b2 mt-2 text-sab">Sabiduría en formato web.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

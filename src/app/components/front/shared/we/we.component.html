@@ -1,0 +1,186 @@
+<div class="relative">
+
+    <div class="container2 py-6 relative">
+
+        <img style="position: absolute;top:0;left:0;width: 100%;opacity: 0.08;z-index: -1;" src="assets/img/default/logotipos/background-logo.jpg" alt="">
+        <img id="logo-gold-sap" src="assets/img/default/logotipos/logo-sap-gold.png" alt="">
+        <h1 class="title-gold"> Sapiencia web </h1>
+
+        <p class="text-justify" style="max-width: 1300px;">
+            Somos un equipo de trabajo multidisciplinario dedicado al diseño y desarrollo de sitios web. Trabajamos con base en distintos lenguajes de programación y diversas herramientas de diseño, que nos permiten obtener resultados únicos, adaptados a las necesidades
+            de la marca, garantizando los aspectos fundamentales de toda web, a saber:
+        </p>
+
+        <div class="containerSwiper" *ngIf="width <= widthShowSwiper">
+            <swiper #swiper style="clear: both; text-align: center;" [config]="config">
+                <ng-template class="m-aut" swiperSlide>
+                    <div class="">
+                        <div class="card card3d cardSwiper">
+                            <div class="card-body" style="background-image:url(assets/img/default/cardsAllWebs/diseno-estetico.jpg)">
+                                <div class="bg-card"></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h3 class="text-white-b text-center" sty>Diseño estético y original.</h3>
+                                        <p class="text-white-b mt-2">Una excelente presentación y originalidad reflejan profesionalismo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template class="m-auto" swiperSlide>
+                    <div class="">
+                        <div class="card card3d cardSwiper">
+                            <div class="card-body" style="background-image:url(assets/img/default/cardsAllWebs/diseno-amigable.jpg);background-position:bottom,center">
+                                <div class="bg-card"></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h3 class="text-white-b text-center" sty>Diseño responsivo e intuitivo.</h3>
+                                        <p class="text-white-b mt-2">Un sitio web debe ser intuitivo para facilitar la navegación del usuario desde cualquier dispositivo.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template class="m-auto" swiperSlide>
+                    <div class="">
+                        <div class="card card3d cardSwiper">
+                            <div class="card-body" style="background-image:url(assets/img/default/cardsAllWebs/seguridad.jpg)">
+                                <div class="bg-card"></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h3 class="text-white-b text-center" sty>Funcionalidad estable y segura.</h3>
+                                        <p class="text-white-b mt-2">Un sitio web estable es necesario para que la navegación de los usuarios sea óptima; y un sitio web seguro permite la protección de los datos. </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+
+
+
+                <ng-template class="m-auto" swiperSlide>
+                    <div class="">
+                        <div class="card card3d cardSwiper">
+                            <div class="card-body" style="background-image:url(assets/img/default/cardsAllWebs/programar.jpg);background-position:top,left ;">
+                                <div class="bg-card"></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h3 class="text-white-b text-center" sty>Modificable en cualquier momento.</h3>
+                                        <p class="text-white-b mt-2">Con el pasar del tiempo las marcas evolucionan o se reinventan, por tanto, surgen cambios que deben ser ajustados en el sitio web; y con nosotros todos los cambios son posibles, pues no estamos sujetos a plantilla
+                                            o gestor alguno.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+
+                <ng-template class="m-auto" swiperSlide>
+                    <div class="">
+                        <div class="card card3d cardSwiper">
+                            <div class="card-body" style="background-image:url(assets/img/default/cardsAllWebs/seo.jpg);">
+                                <div class="bg-card"></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h3 class="text-white-b text-center" sty>SEO Optimización para motores de búsqueda.</h3>
+                                        <p class="text-white-b mt-2 animate fadeIn">Conjunto de herramientas que aplicadas de forma correcta, posicionan el sitio web en los primeros lugares, de la lista de resultados de los motores de búsqueda . </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </swiper>
+            <a class="next" (click)="slideNext()"><i class="fas fa-chevron-left"></i></a>
+            <a class="prev" (click)="slidePrev()"><i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <!-- Cards -->
+        <div *ngIf="width > widthShowSwiper" class="pt-4 cards3d" style="clear: both; text-align: center;">
+            <div class="containerCard">
+                <div class="card card3d">
+                    <div class="card-body" style="background-image:url(assets/img/default/cardsAllWebs/diseno-estetico.jpg)">
+                        <div class="bg-card"></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="text-white-b text-center" sty>Diseño estético y original.</h3>
+                                <p class="text-white-b mt-2">Una excelente presentación y originalidad reflejan profesionalismo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerCard">
+                <div class="card card3d">
+                    <div class="card-body" style="background-image:url(assets/img/default/cardsAllWebs/diseno-amigable.jpg);background-position:bottom,center">
+                        <div class="bg-card"></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="text-white-b text-center" sty>Diseño responsivo e intuitivo.</h3>
+                                <p class="text-white-b mt-2">Un sitio web debe ser intuitivo para facilitar la navegación del usuario desde cualquier dispositivo.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerCard">
+                <div class="card card3d">
+                    <div class="card-body" style="background-image:url(assets/img/default/cardsAllWebs/seguridad.jpg)">
+                        <div class="bg-card"></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="text-white-b text-center" sty>Funcionalidad estable y segura.</h3>
+                                <p class="text-white-b mt-2">Un sitio web estable es necesario para que la navegación de los usuarios sea óptima; y un sitio web seguro permite la protección de los datos. </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerCard">
+                <div class="card card3d">
+                    <div class="card-body" style="background-image:url(assets/img/default/cardsAllWebs/programar.jpg);background-position:top,left ;">
+                        <div class="bg-card"></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="text-white-b text-center" sty>Modificable en cualquier momento.</h3>
+                                <p class="text-white-b mt-2">Con el pasar del tiempo las marcas evolucionan o se reinventan, por tanto, surgen cambios que deben ser ajustados en el sitio web; y con nosotros todos los cambios son posibles, pues no estamos sujetos a plantilla o gestor
+                                    alguno. </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerCard">
+                <div class="card card3d">
+                    <div class="card-body" style="background-image:url(assets/img/default/cardsAllWebs/seo.jpg);">
+                        <div class="bg-card"></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="text-white-b text-center" sty>SEO Optimización para motores de búsqueda.</h3>
+                                <p class="text-white-b mt-2 animate fadeIn">Conjunto de herramientas que aplicadas de forma correcta, posicionan el sitio web en los primeros lugares, de la lista de resultados de los motores de búsqueda . </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="cut-gold-t-bottom"></div>
+    <div class="cut-gold-bottom"></div>
+</div>

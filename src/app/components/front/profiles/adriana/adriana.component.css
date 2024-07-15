@@ -1,0 +1,43 @@
+.card1 img {
+    width: 300px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border: solid 5px white;
+    box-shadow: 1px 1px rgb(116, 116, 116), -1px -1px rgb(116, 116, 116);
+    float: left;
+    margin-bottom: 90px;
+}
+
+.studies img {
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    width: 150px;
+    border: solid 5px white;
+    box-shadow: 1px 1px rgb(116, 116, 116), -1px -1px rgb(116, 116, 116);
+    margin: auto;
+}
+
+.container-text {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+@media (max-width:768px) {
+    .card1 img {
+        float: none;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+    .card1 {
+        text-align: center;
+    }
+    .container-text {
+        text-align: left;
+        max-width: 300px;
+        /* background-color: red; */
+        padding: 0;
+        margin: auto;
+    }
+}

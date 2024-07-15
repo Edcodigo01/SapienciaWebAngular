@@ -1,0 +1,119 @@
+#logo-gold-sap {
+    width: 200px;
+    filter: drop-shadow( 4px 4px 4px rgb(117, 117, 117));
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.circle {
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    border-radius: 100%;
+    border: solid 8px rgba(255, 255, 255, 0.836);
+    position: relative;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.zoomImg:hover>.circle img {
+    transform: scale(1.5);
+    transition-duration: 2s;
+}
+
+.bg-circle {
+    background: rgba(0, 0, 0, 0.226);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.misionVision p {
+    max-width: 500px;
+    margin: auto;
+    text-align: justify;
+}
+
+.cardF .card-header {
+    padding: 0;
+}
+
+.cardF img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.cardF {
+    max-width: 370px;
+}
+
+@media (max-width:1300px) {
+    .circle {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width:1024px) {
+    #logo-gold-sap {
+        width: 150px;
+        filter: drop-shadow( 2px 2px 2px rgb(117, 117, 117));
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width:965px) {
+    .containerCard {
+        width: 50%;
+    }
+    .circle {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width:768px) {
+    #logo-gold-sap {
+        width: 70px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width:576px) {
+    #logo-gold-sap {
+        width: 45px;
+        filter: drop-shadow( 1px 1px 1px rgb(77, 77, 77));
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    .cardSwiper {
+        height: 270px !important;
+    }
+    .circle {
+        width: 220px;
+        height: 220px;
+    }
+    .cardF {
+        max-width: 300px;
+    }
+}
+
+@media (max-width:330px) {
+    .cardSwiper h3 {
+        font-size: 20px !important;
+    }
+    .title-gold {
+        font-size: 27px !important;
+    }
+}

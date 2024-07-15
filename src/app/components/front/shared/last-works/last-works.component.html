@@ -1,0 +1,92 @@
+<div class="py-6 container2">
+    <div class="row m-auto">
+        <div class="col-12">
+            <h1 *ngIf="location().includes('portafolio')" class="text-center title-gold mb-5" style="z-index: 5;">Últimos trabajos</h1>
+            <h1 *ngIf="location().includes('edwar')" class="text-center text-white-b mb-5" style="z-index: 5;">Últimos trabajos</h1>
+        </div>
+        <div *ngFor="let work of works" class="col-md-6 col-lg-6 col-xl-4 p-1">
+            <div class="card cardWork mb-2">
+                <div class="card-body p-0 relative">
+                    <img [src]="work.images[0] | imgSm" alt="">
+                </div>
+                <div class="card-footer bg-white px-2">
+                    <h5 class="m-0 text-gold"> {{work.name}}</h5>
+
+                    <p class="m-0"> {{work.description}}</p>
+
+                    <div class="technologies-card row m-auto" style="">
+                        <div class="col-12 py-3">
+                            <img *ngFor="let techno of work.main_technologies" src="assets\img\default\tecnologias\{{techno}}" alt="">
+                        </div>
+                    </div>
+                    <div class="mt-1">
+                        <a *ngIf="work?.link" href="{{work.link}}" target="_blank" class="btn btn-sm btn-gold"> Sitio</a>
+
+                        <small *ngIf="!work?.link"> (En desarrollo)</small>
+                        <a class="float-right btn btn-sm btn-gold" (click)="openModal(work.name)"> Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL WORK -->
+<ng-template #modalWork let-c="close" let-d="dismiss" class="mb-4 modal-work-template">
+    <!-- <div class="modal-header " *ngIf="selected?.name">
+     <h4 class="modal-title text-white " id="modal-basic-title "> <i class="fas fa-exclamation"></i> Atención</h4>
+  </div> -->
+    <div class="modal-body modal-work" *ngIf="selected?.name">
+        <button type="button " class="close mb-2" style="margin-top: -10px;" aria-label="Close " (click)="d( 'Cross click') ">
+      <span aria-hidden="true ">×</span>
+      </button>
+        <br>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" *ngFor="let img of selected.images;let index = index" data-slide-to="{index}" [class.active]="index == 0"></li>
+            </ol>
+            <div class="carousel-inner relative">
+                <div class="overlay-carousel"></div>
+                <div class="carousel-item carousel-item-modal" *ngFor="let img of selected.images;let index = index" [class.active]="index == 0">
+                    <img class="d-block w-100" [src]="img" alt="">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Ant.</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Sig.</span>
+            </a>
+        </div>
+        <br>
+        <h3 style="word-wrap: break-word;" class=" text-gold">{{selected?.name}}</h3>
+        <p class="m-0">{{selected?.description}}</p>
+        <div *ngIf="selected?.description_lg && selected?.description_lg.length != 0">
+            <br>
+            <h5 style="font-weight:bold">Descripción:</h5>
+            <p class="text-justify m-0 mb-1" *ngFor="let descLG of selected.description_lg;let index = index"> {{descLG}} </p>
+        </div>
+
+        <div *ngIf="selected?.autoadministrables && selected?.autoadministrables.length != 0">
+            <br>
+            <h5 style="font-weight:bold">Secciones Autoadministrables:</h5>
+            <p class="text-justify m-0" *ngFor="let auto of selected.autoadministrables"> <i class="fas fa-check"></i> {{auto}} </p>
+        </div>
+
+        <br>
+        <h5 style="font-weight:bold">Tecnologías:</h5>
+        <div class="technologies-card technologies-card-modal row ">
+            <div class="col-12 py-1">
+                <img *ngFor="let techno of selected.technologies" src="assets\img\default\tecnologias\{{techno}}" alt="">
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer p-2">
+
+        <a *ngIf="selected?.link" href="{{selected.link}}" target="_blank" class="btn  btn-gold mr-auto"> Visitar sitio</a>
+        <button type="button " class="btn btn-light" (click)="c('yes') "> Cerrar</button>
+    </div>
+</ng-template>

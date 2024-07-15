@@ -1,0 +1,81 @@
+.quote {
+    overflow: hidden;
+}
+
+.quote .calculadora {
+    width: 100px;
+    margin-right: 10px;
+    float: left;
+}
+
+.quote .text {
+    margin-top: 20px;
+}
+
+.quote .girl {
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    height: 300px;
+    top: 20px;
+}
+
+@media (max-width:1700px) {
+    .quote .text {
+        width: 60%;
+    }
+}
+
+@media (max-width:1260px) {
+    .quote .text {
+        width: 75%;
+    }
+    .quote .girl {
+        right: 5%;
+    }
+}
+
+@media (max-width:997px) {
+    .quote .text {
+        width: 70%;
+    }
+    h1 {
+        font-size: 30px !important;
+    }
+    h4 {
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width:760px) {
+    .quote .girl {
+        height: 250px;
+        top: auto;
+        bottom: 0;
+    }
+    .quote .calculadora {
+        width: 50px;
+    }
+    .quote .text {
+        width: 60%;
+    }
+}
+
+@media (max-width:576px) {
+    .quote .girl {
+        height: 200px;
+    }
+    .quote .calculadora {
+        display: none;
+    }
+    h1 {
+        font-size: 27px !important;
+    }
+    h4 {
+        font-size: 13px !important;
+    }
+    .quote .text {
+        margin-top: -30px;
+        margin-bottom: 50px;
+    }
+}

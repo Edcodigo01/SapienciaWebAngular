@@ -1,0 +1,63 @@
+<div id="navbar" [ngClass]="{'navbar2':navbar2}">
+    <div *ngIf="!navbar2" class="bg-cut"></div>
+    <div *ngIf="!navbar2" class="bg-cut-white"></div>
+
+    <div class="container-nav form-inline" style="height: 100%;">
+        <div id="navbar-section-logo" class="hover" routerLink="/">
+            <div class=" form-inline"></div>
+            <img class="logo-sap" src="assets/img/default/logotipos/logo-sap-blanco.png" alt="">
+            <img class="text-sap" src="assets/img/default/logotipos/text-sap.png" alt="">
+        </div>
+        <div id="navbar-section-links" class="hide-lg">
+            <a class="" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+            <a class="" routerLink="/servicios-y-planes" routerLinkActive="active">Servicios y Planes</a>
+            <a class="" routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
+            <a class="" routerLink="/portafolio" routerLinkActive="active">Portafolio</a>
+            <a class="" routerLink="/contactanos" routerLinkActive="active">Contáctanos</a>
+        </div>
+        <div class="main-sm show-lg ml-auto" [ngClass]="{'navbar2':navbar2}">
+            <a href="" class="" data-toggle="modal" data-target="#modalMain"> <i class="fas fa-bars"></i> </a>
+
+        </div>
+    </div>
+</div>
+
+<div *ngIf="navbar2" id="bg-white-rectangular"></div>
+
+<div #boxChat class="boxChat" (click)="goWhatsapp()">
+    <div class="card">
+        <div class="card-body p-1 ">
+            <img class="float-right img-whatsapp" src="assets\img\default\whatsapp-square.png" alt="">
+            <img class="img-girl" src="assets\img\default\fundadores\adriana-sm.jpg" alt="">
+            <p class="m-0 mt-1 text-"> <i style="font-size: 12px;" class="fas fa-circle text-success"></i> {{saludo}}, ¿en qué podemos ayudarte?</p>
+        </div>
+
+    </div>
+    <img class="float-right img-whatsapp-2" src="assets\img\default\whatsapp-square.png" alt="">
+</div>
+
+<!-- Modal Right-->
+<div class="modal right fade" id="modalMain" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-main">
+            <div class="modal-body " style="overflow-y: auto;">
+                <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                <h2 class="text-center text-white-b text-gold-l   mt-3 ml-1">Menú</h2>
+
+                <div class="main-modal mt-5">
+                    <a class="" data-toggle="modal" data-target="#modalMain" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+                    <a class="" data-toggle="modal" data-target="#modalMain" routerLink="/servicios-y-planes" routerLinkActive="active">Servicios y Planes</a>
+                    <a class="" data-toggle="modal" data-target="#modalMain" routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
+                    <a class="" data-toggle="modal" data-target="#modalMain" routerLink="/portafolio" routerLinkActive="active">Portafolio</a>
+                    <a class="" data-toggle="modal" data-target="#modalMain" routerLink="/contactanos" routerLinkActive="active">Contáctanos</a>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+    </div>
+</div>

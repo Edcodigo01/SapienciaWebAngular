@@ -1,0 +1,137 @@
+/* SECTION 2 */
+
+#logo-gold-sap {
+    width: 200px;
+    filter: drop-shadow( 4px 4px 4px rgb(117, 117, 117));
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.containerCard {
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    padding: 5px;
+    margin: auto;
+    margin: -10px;
+}
+
+.bg-card {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.479), 20%, rgba(0, 0, 0, 0.014));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cardSwiper {
+    height: 300px !important;
+    max-width: 500px;
+    margin: auto;
+}
+
+.cardSwiper .bg-card {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.575), 20%, rgba(0, 0, 0, 0.219));
+}
+
+.card3d {
+    height: 100%;
+    position: relative;
+    border: 4px solid rgb(243, 243, 243);
+    box-shadow: none;
+}
+
+.cards3d .card3d {
+    transform: rotate(5deg) rotateY( 5deg);
+    box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.438), -1px -1px rgb(218, 218, 218), 1px 1px rgb(218, 218, 218);
+}
+
+.cards3d .card3d:hover {
+    transition-duration: 0.7s;
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    /* IE 9 */
+    transform: scale(1.3);
+    z-index: 5;
+}
+
+.card3d .card-body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cards3d .card3d .card-body {
+    border-radius: 3px !important;
+}
+
+.card3d h3 {
+    z-index: 5;
+    color: vwhite;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px 1px 6px rgb(85, 85, 85), -1px -1px 6px rgb(85, 85, 85);
+}
+
+.card3d p {
+    padding: 5px;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+}
+
+.cards3d .card3d p {
+    display: none;
+}
+
+.card3d:hover>.card-body .row .col-12 p {
+    display: inherit;
+}
+
+.card3d:hover>.card-body .bg-card {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.575), 20%, rgba(0, 0, 0, 0.219));
+}
+
+.card3d:hover>.card-body .bg-card {
+    display: inherit;
+}
+
+@media (max-width:1024px) {
+    #logo-gold-sap {
+        width: 150px;
+        filter: drop-shadow( 2px 2px 2px rgb(117, 117, 117));
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width:965px) {
+    .containerCard {
+        width: 50%;
+    }
+}
+
+@media (max-width:768px) {
+    #logo-gold-sap {
+        width: 70px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width:576px) {
+    #logo-gold-sap {
+        width: 45px;
+        filter: drop-shadow( 1px 1px 1px rgb(77, 77, 77));
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    .cardSwiper {
+        height: 270px !important;
+    }
+}
+
+@media (max-width:330px) {
+    .cardSwiper h3 {
+        font-size: 20px !important;
+    }
+}

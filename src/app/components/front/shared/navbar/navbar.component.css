@@ -1,0 +1,350 @@
+#navbar {
+    width: auto;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.bg-cut {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.822);
+}
+
+.bg-cut-white {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 106%;
+    z-index: -2;
+    background: rgba(243, 243, 243, 0.329);
+}
+
+.logo-sap {
+    height: 75%;
+    margin-top: -8px;
+}
+
+.text-sap {
+    height: 40px;
+    margin-top: -8px;
+}
+
+#navbar-section-links {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -25px;
+}
+
+#navbar a {
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 27px;
+    font-family: 'Poppins-regular', sans-serif;
+}
+
+#navbar a:hover {
+    color: rgb(196, 196, 196);
+}
+
+#navbar a.active {
+    color: gold;
+}
+
+#navbar-section-logo {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar.navbar2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.822);
+    height: 58px;
+}
+
+#navbar.navbar2 #navbar-section-links {
+    margin-top: 0;
+}
+
+#navbar.navbar2 .logo-sap {
+    margin-top: 0;
+}
+
+#navbar.navbar2 .text-sap {
+    margin-top: 0;
+}
+
+#bg-white-rectangular {
+    position: fixed;
+    background: rgba(243, 243, 243, 0.479);
+    top: 0;
+    left: 0;
+    height: 62px;
+    width: 100%;
+    z-index: 5;
+}
+
+.main-sm {
+    margin-top: -20px
+}
+
+.main-sm.navbar2 {
+    margin-top: 0px
+}
+
+@media (max-width:1700px) {
+    .bg-cut {
+        clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+    }
+    .bg-cut-white {
+        clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+    }
+}
+
+@media (max-width:1300px) {
+    #navbar a {
+        padding: 5px 8px 5px 8px;
+        font-size: 23px;
+    }
+    .bg-cut {
+        clip-path: polygon(0 0, 100% 0, 100% 65%, 0% 100%);
+    }
+    .bg-cut-white {
+        clip-path: polygon(0 0, 100% 0, 100% 65%, 0% 100%);
+    }
+    #navbar {
+        height: 80px;
+    }
+    .logo-sap {
+        height: 65%;
+        margin-top: -5px;
+    }
+    .text-sap {
+        height: 30px;
+        margin-top: -5px;
+    }
+    #navbar-section-links {
+        margin-top: -15px;
+    }
+}
+
+@media (max-width:1024px) {
+    #navbar a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:992px) {
+    #navbar-section-links {
+        width: 60%;
+    }
+    #navbar-section-logo {
+        width: 60%;
+        justify-content: left;
+    }
+    #navbar {
+        height: 70px;
+    }
+}
+
+
+/* @media (max-width:992px) {} */
+
+
+/* <576px	Small
+≥576px	Medium
+≥768px	Large
+≥992px	Extra large
+≥1200px */
+
+.boxChat {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 10;
+    width: 275px;
+}
+
+.boxChat .card {
+    border: solid grey 1px;
+    border-radius: 5px !important;
+    background: rgba(255, 255, 255, 0.795);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.144) !important;
+}
+
+.boxChat .img-girl {
+    width: 45px;
+    border-radius: 100%;
+    float: left;
+    margin-right: 10px;
+}
+
+.boxChat .img-whatsapp {
+    width: 45px;
+}
+
+.boxChat p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.boxChat .img-whatsapp {
+    border-radius: 5px;
+    margin: 0;
+    border: rgb(175, 175, 175) solid 1px;
+    margin-top: 1px;
+}
+
+.boxChat:hover {
+    cursor: pointer;
+}
+
+.boxChat:hover>.card {
+    background: white;
+}
+
+.boxChat:hover>.card .card-body .img-whatsapp {
+    opacity: 0.9;
+}
+
+.boxChat:hover>.card .card-body p {
+    color: var(--gold-b) !important;
+}
+
+.img-whatsapp-2 {
+    width: 50px;
+    opacity: 0.7;
+    border: 2px white solid;
+    border-radius: 5px;
+    display: none;
+}
+
+.img-whatsapp-2:hover {
+    opacity: 1;
+}
+
+.img-whatsapp-2:active {
+    opacity: 1;
+}
+
+@media (max-width:720px) {
+    .boxChat .card {
+        display: none;
+    }
+    .img-whatsapp-2 {
+        display: inherit;
+    }
+    .boxChat {
+        right: 25px;
+        bottom: 25px;
+        width: 50px;
+    }
+    .img-whatsapp-2 {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+
+/* ----------MODAL MAIN-------------- */
+
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px !important;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+    top: 70px !important;
+}
+
+.modal.right .modal-dialog .modal-body {
+    border: 2px rgba(255, 255, 255, 0.712) solid;
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+    /* height: 100%; */
+    overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+
+/*Left*/
+
+.modal.left.fade .modal-dialog {
+    left: -320px;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+    transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.show .modal-dialog {
+    left: 0;
+}
+
+
+/*Right*/
+
+.modal.right.fade .modal-dialog {
+    right: -320px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.show .modal-dialog {
+    right: 0;
+}
+
+.modal-content-main {
+    background: rgba(0, 0, 0, 0.788);
+}
+
+.modal-content-main .close {
+    color: white;
+}
+
+.modal-content-main a {
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: 'Poppins-regular', sans-serif;
+    display: block;
+    text-align: center;
+}
+
+.modal-content-main a:hover {
+    color: rgb(196, 196, 196);
+}
+
+.modal-content-main a.active {
+    color: gold;
+}

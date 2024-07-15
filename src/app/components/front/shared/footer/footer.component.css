@@ -1,0 +1,49 @@
+.footer {
+    padding: 40px 0 40px 0;
+    background: var(--gold-l);
+    border-top: 4px var(--gold) solid;
+}
+
+@font-face {
+    font-family: 'Poppins-Semi-bold';
+    src: url(src/assets/fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'MerriweatherSans-Semi-bold';
+    src: url(src/assets/fonts/MerriweatherSans-SemiBold.ttf);
+}
+
+.footer h4 {
+    font-family: 'Poppins-Bold', sans-serif;
+}
+
+.footer p {
+    font-family: 'MerriweatherSans-Semi-bold', sans-serif;
+}
+
+.logo-sap {
+    width: 70px;
+    z-index: 5;
+    display: inline-flex;
+    filter: drop-shadow(2px 2px 2px rgb(58, 58, 58));
+}
+
+.text-sap {
+    width: 180px;
+    z-index: 5;
+    display: inline-flex;
+    filter: drop-shadow(2px 2px 2px rgb(58, 58, 58));
+}
+
+@media (max-width:720px) {
+    .logo-sap {
+        width: 50px;
+    }
+    .text-sap {
+        width: 140px;
+    }
+    .text-sab {
+        font-size: 14px !important;
+    }
+}

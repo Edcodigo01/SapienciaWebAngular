@@ -1,0 +1,39 @@
+/* HIRE US */
+
+.hire-us {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hire-us .far {
+    color: var(--gold) !important;
+}
+
+.bg-black {
+    background: rgba(0, 0, 0, 0.329);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:992px) {
+    .hire-us h3 {
+        font-size: 22px !important;
+    }
+}
+
+@media (max-width:576px) {
+    .hire-us h3 {
+        font-size: 18px !important;
+        text-shadow: 1px 1px black, -1px -1px 1px rgb(102, 102, 102);
+    }
+}
+
+
+/* <576px	Small
+≥576px	Medium
+≥768px	Large
+≥992px */

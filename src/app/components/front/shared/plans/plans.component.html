@@ -1,0 +1,75 @@
+<div class="container2 py-6">
+    <h1 class="title-gold text-center">Planes / Tipos de webs</h1>
+    <h5 class="text-center">Creamos y combinamos cualquier tipo de funcionalidad según las necesidades de tu marca.</h5>
+
+    <!-- planes swiper -->
+    <div class="containerSwiper" *ngIf="width < widthShowSwiper">
+        <swiper #swiper style="clear: both; text-align: center;" [config]="config">
+
+            <ng-template class="m-aut" swiperSlide *ngFor="let plan of plansArray">
+                <div class="card mb-4">
+                    <div class="card-body p-3 pb-0 text-left ">
+
+                        <div class="overflowCard limit">
+                            <div class="contentCard" [innerHTML]="plan.content">
+
+                            </div>
+                        </div>
+                        <div *ngIf="plan.name != 'Web idea personal'" class="showMore show text-center" (click)="showModalPlan(plan.name)">
+                            <span class=" text-show-more"><i class="fas arrowShowMore fa-arrow-down"></i> Mostrar más...</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <button (click)="goWhatsapp(plan.name)" type="button" class="btn btn-lg btn-gold btn-block"> <i style="font-size:120%" class="mr-1 pt-1 fab fa-whatsapp"></i> Consultar precio</button>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+        <a class="next" (click)="slideNext()"><i class="fas fa-chevron-left"></i></a>
+        <a class="prev" (click)="slidePrev()"><i class="fas fa-chevron-right"></i></a>
+    </div>
+    <!-- planes cards -->
+    <div class="row mt-4" #plans *ngIf="width >= widthShowSwiper">
+        <div class="col-lg-6 col-xl-4 col-sm-6 mb-4 px-1" *ngFor="let plan of plansArray">
+            <div class="card">
+                <div class="card-body p-3 pb-0 text-left ">
+
+                    <div class="overflowCard limit">
+                        <div class="contentCard" [innerHTML]="plan.content">
+
+                        </div>
+                    </div>
+                    <div class="showMore clickShowMore text-center">
+                        <span class="clickParent text-show-more"><i class="fas arrowShowMore fa-arrow-down clickParent"></i> Mostrar más...</span>
+                        <span class="clickParent text-show-less" style="display: none;"><i class="fas arrowShowMore fa-arrow-up clickParent"></i> Ocultar</span>
+                    </div>
+
+                </div>
+                <div class="card-footer bg-white">
+                    <button (click)="goWhatsapp(plan.name)" type="button" class="btn btn-lg btn-gold btn-block"> <i style="font-size:120%" class="mr-1 pt-1 fab fa-whatsapp"></i> Consultar precio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODAL plan -->
+    <ng-template #modalPlan let-c="close" let-d="dismiss" class="mb-4">
+        <!-- <div class="modal-header " *ngIf="selected?.name">
+     <h4 class="modal-title text-white " id="modal-basic-title "> <i class="fas fa-exclamation"></i> Atención</h4>
+  </div> -->
+        <div class="modal-body modal-work" *ngIf="selected?.name">
+
+            <button type="button " class="close mb-2" style="margin-top: -10px;" aria-label="Close " (click)="d( 'Cross click') ">
+      <span aria-hidden="true ">×</span>
+    </button>
+            <div class="contentCard" [innerHTML]="selected.content">
+
+            </div>
+        </div>
+        <div class="modal-footer ">
+            <button type="button " class="btn btn-gold" (click)="c('yes') "> Cerrar</button>
+        </div>
+    </ng-template>
+
+</div>
