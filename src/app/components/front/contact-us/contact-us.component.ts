@@ -31,13 +31,9 @@ export class ContactUsComponent implements OnInit {
   ngOnInit(): void {
     this.createForm();
     this.titleService.setTitle('Contáctanos');
-
-
   }
 
   createForm() {
-
-
     this.form = this.formBuilder.group({
       email: ['',[Validators.required,Validators.email]],
       message: ['',[Validators.required, Validators.minLength(5)]],
@@ -48,8 +44,6 @@ export class ContactUsComponent implements OnInit {
   }
 
   sendMessage(){
-
-    console.log(this.form);
     this.sendLoading = true;
     if (this.form.status == 'INVALID') {
       this.form.markAllAsTouched();
