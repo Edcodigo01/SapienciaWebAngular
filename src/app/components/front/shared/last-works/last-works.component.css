@@ -1,0 +1,88 @@
+.modal-work .carousel-item {
+  border: solid 1px rgb(73, 73, 73);
+  height: 600px;
+  background: var(--gold);
+}
+
+.modal-work .carousel-item-modal img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+}
+
+@media (max-width: 1400px) {
+  .modal-work .carousel-item {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .modal-work .carousel-item {
+    height: 430px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .modal-work .carousel-item {
+    height: 370px;
+  }
+}
+
+@media (max-width: 740px) {
+  .modal-work .carousel-item {
+    height: 300px;
+  }
+}
+
+@media (max-width: 580px) {
+  .modal-work .carousel-item {
+    height: 250px;
+  }
+  .modal-work h3 {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  /* .modal-work {
+          padding: 10px !important;
+      }
+      .modal-work-template .modal-footer {
+          padding: 10px !important;
+      } */
+  .modal-work .carousel-item {
+    height: 200px;
+  }
+}
+
+.btn-light {
+  border: 1px solid rgb(172, 172, 172) !important;
+  font-weight: 600 !important;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 30px !important;
+  height: 30px !important;
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.479))
+    drop-shadow(-1px -1px 3px rgba(0, 0, 0, 0.479));
+}
+
+.carousel-indicators li {
+  background-color: white;
+  z-index: 3;
+}
+
+.carousel-indicators .active {
+  background-color: grey;
+}
+
+.overlay-carousel {
+  background: linear-gradient(to bottom, transparent, 90%, rgba(0, 0, 0, 0.39));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}

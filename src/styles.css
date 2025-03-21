@@ -59,7 +59,7 @@ label {
 }
 
 h1 {
-  font-size: 50px !important;
+  font-size: 45px !important;
 }
 
 h1,
@@ -512,122 +512,6 @@ body {
   max-width: 1200px;
 }
 
-.cardProfile {
-  border-radius: 15px;
-  overflow: hidden;
-  border: 1px solid rgb(233, 231, 231);
-  box-shadow: 7px 7px 5px rgba(197, 197, 197, 0.377);
-}
-
-.cardProfile .containter-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 370px;
-  padding: 50px;
-}
-
-.cardProfile img {
-  width: 300px;
-  height: 370px;
-  object-fit: cover;
-  float: left;
-}
-
-@media (max-width: 1200px) {
-  .cardProfile img {
-    height: 400px;
-  }
-  .cardProfile .containter-text {
-    height: 400px;
-  }
-  .container2 {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width: 992px) {
-  .cardProfile img {
-    width: 220px;
-  }
-}
-
-@media (max-width: 768px) {
-  .cardProfile img {
-    float: none;
-    width: 100%;
-  }
-  .cardProfile {
-    max-width: 400px;
-  }
-  .cardProfile .containter-text {
-    padding: 20px;
-    padding-top: 20px;
-    height: auto;
-  }
-  .cardProfile h5 {
-    font-size: 14px !important;
-  }
-}
-
-@media (max-width: 400px) {
-  .cardProfile img {
-    height: 350px;
-  }
-}
-
-@media (max-width: 300px) {
-  .cardProfile img {
-    height: 300px;
-  }
-}
-
-.technologies {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 7px;
-}
-
-.technologies img {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  margin: auto;
-  border: 1px solid rgb(233, 231, 231);
-  border-radius: 5px;
-  box-shadow: 7px 7px 5px rgba(197, 197, 197, 0.377);
-  margin-bottom: 5px;
-}
-
-@media (max-width: 1200px) {
-  .technologies img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 8px;
-  }
-  .technologies {
-    margin-bottom: 4px;
-  }
-  
-}
-
-@media (max-width: 900px) {
-  .technologies img {
-    width: 70px;
-    height: 70px;
-  }
-}
-
-.technologies-sm {
-  display: none;
-}
-
-@media (max-width: 576px) {
-  .technologies-sm {
-    display: flex;
-  }
-}
-
 .technologies-card img {
   width: 45px;
   height: 55px;
@@ -729,93 +613,7 @@ body {
   }
 }
 
-.modal-work .carousel-item {
-  border: solid 1px rgb(73, 73, 73);
-  height: 600px;
-}
 
-.modal-work .carousel-item-modal img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
-}
-
-@media (max-width: 1400px) {
-  .modal-work .carousel-item {
-    height: 500px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .modal-work .carousel-item {
-    height: 430px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .modal-work .carousel-item {
-    height: 370px;
-  }
-}
-
-@media (max-width: 740px) {
-  .modal-work .carousel-item {
-    height: 300px;
-  }
-}
-
-@media (max-width: 580px) {
-  .modal-work .carousel-item {
-    height: 250px;
-  }
-  .modal-work h3 {
-    font-size: 20px !important;
-  }
-}
-
-@media (max-width: 400px) {
-  /* .modal-work {
-        padding: 10px !important;
-    }
-    .modal-work-template .modal-footer {
-        padding: 10px !important;
-    } */
-  .modal-work .carousel-item {
-    height: 200px;
-  }
-}
-
-.btn-light {
-  border: 1px solid rgb(172, 172, 172) !important;
-  font-weight: 600 !important;
-}
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  width: 30px !important;
-  height: 30px !important;
-  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.479))
-    drop-shadow(-1px -1px 3px rgba(0, 0, 0, 0.479));
-}
-
-.carousel-indicators li {
-  background-color: white;
-  z-index: 3;
-}
-
-.carousel-indicators .active {
-  background-color: grey;
-}
-
-.overlay-carousel {
-  background: linear-gradient(to bottom, transparent, 90%, rgba(0, 0, 0, 0.39));
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
 
 label.text-danger {
   font-size: 11px;

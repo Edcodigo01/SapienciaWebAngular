@@ -17,7 +17,7 @@
         "assets/img/portafolio/demostracion-facturacion/image-6-compressed.jpg",
         "assets/img/portafolio/demostracion-facturacion/image-7-compressed.jpg"
       ],
-      "autoadministrables": [
+      "administrables": [
         "Ventas (facturas)",
         "Productos",
         "Precios adicionales",
@@ -63,7 +63,7 @@
         "assets/img/portafolio/master-painting/addWork.png",
         "assets/img/portafolio/master-painting/changuepass.png"
       ],
-      "autoadministrables": [
+      "administrables": [
         "Portafolio: se muestran algunos trabajos realizados por la marca",
         "Videos: permite compartir videos alojados en Youtube",
         "Cambio de contraseña del administrador.",
@@ -104,7 +104,7 @@
         "assets/img/portafolio/2v/blog.png",
         "assets/img/portafolio/2v/contactanos.png"
       ],
-      "autoadministrables": [
+      "administrables": [
         "Blog: artículos con diversas categorías",
         "Videos: permite compartir videos alojados en Youtube.",
         "Testimonios",
@@ -149,7 +149,7 @@
         "assets/img/portafolio/belizabeth/add-video.png",
         "assets/img/portafolio/belizabeth/admin-videos.png"
       ],
-      "autoadministrables": [
+      "administrables": [
         "Blog:  artículos con diversas categorías",
         "Videos: permite compartir videos alojados en Youtube",
         "Cambio de contraseña del administrador."
@@ -184,7 +184,7 @@
         "assets/img/portafolio/sapiencia/portafolio-modal.png",
         "assets/img/portafolio/sapiencia/contactanos.png"
       ],
-      "autoadministrables": [
+      "administrables": [
         "Portafolio: permite visualizar los últimos trabajos realizados por la marca."
       ],
       "main_technologies": [
@@ -219,7 +219,7 @@
         "assets/img/portafolio/eskadental/add-article.png",
         "assets/img/portafolio/eskadental/admin-cate.png"
       ],
-      "autoadministrables": ["Blog: artículos con diversas categorías"],
+      "administrables": ["Blog: artículos con diversas categorías"],
       "main_technologies": [
         "laravel.jpg",
         "mysql.jpg",
@@ -257,7 +257,7 @@
         "assets/img/portafolio/demostracion-facturacion/image-6-compressed.jpg",
         "assets/img/portafolio/demostracion-facturacion/image-7-compressed.jpg"
       ],
-      "autoadministrables": [
+      "administrables": [
         "Ventas (facturas)",
         "Productos",
         "Precios adicionales",
@@ -297,7 +297,7 @@
         "assets/img/portafolio/keo-planner/4.png",
         "assets/img/portafolio/keo-planner/5.png"
       ],
-      "autoadministrables": [
+      "administrables": [
         "Agenda (reservaciones)",
         "Profesionales",
         "Servicios",
@@ -324,6 +324,58 @@
       ]
     },
     {
+      "name": "Factusis (colaboración)",
+      "link": "https://factusis.com",
+      "description": "Sistema de facturación muy completo.",
+      "description_lg": [
+        "Sistema que permite gestionar y automatizar la emisión, el control y el registro de facturas para empresas o negocios."
+      ],
+      "images": [
+        "assets/img/portafolio/mayasoft/1.jpg",
+        "assets/img/portafolio/mayasoft/2.jpg",
+        "assets/img/portafolio/mayasoft/3.jpg",
+        "assets/img/portafolio/mayasoft/4.jpg",
+        "assets/img/portafolio/mayasoft/5.jpg",
+        "assets/img/portafolio/mayasoft/6.jpg"
+
+      ],
+      "features": [
+        "Emitir facturas y aplicar impuestos automáticamente.",
+        "Registrar y administrar información de clientes y proveedores.",
+        "Personalizar facturas con logo, datos fiscales y formatos predefinidos.",
+        "Generar facturas electrónicas o en papel (PDF).",
+        "Guardar historiales de compras y ventas.",
+        "Enviar facturas y recordatorios de pago automáticamente.",
+        "Actualizar el stock automáticamente con cada venta.",
+        "Gestionar productos y servicios con precios, descripciones y categorías.",
+        "Alertar sobre productos con bajo inventario.",
+        "Registrar pagos parciales o totales.",
+        "Enviar recordatorios de pagos vencidos a clientes.",
+        "Generar reportes de ventas, compras, impuestos y ganancias.",
+        "Visualizar gráficos y tendencias de ingresos y egresos.",
+        "Exportar datos a Excel, PDF o sistemas contables.",
+        "Extraer datos de identificación a través de APIs de terceros.",
+        "Enviar correos automáticamente para distintos tipos de notificaciones.",
+        "Y más..."
+      ],
+      "main_technologies": [
+        "laravel.jpg",
+        "vue.png",
+        "mysql.jpg",
+        "html.jpg",
+        "css.jpg",
+        "bootstrap.jpg"
+      ],
+      "technologies": [
+        "laravel.jpg",
+        "vue.png",
+        "mysql.jpg",
+        "html.jpg",
+        "css.jpg",
+        "bootstrap.jpg"
+      ]
+    },
+    {
       "name": "masterpaintingflorida.net",
       "link": "https://www.masterpaintingflorida.net",
       "description": "Web Portafolio / Videos / Testimonios",
@@ -343,7 +395,7 @@
         "assets/img/portafolio/master-painting/addWork.png",
         "assets/img/portafolio/master-painting/changuepass.png"
       ],
-      "autoadministrables": [
+      "administrables": [
         "Portafolio: se muestran algunos trabajos realizados por la marca",
         "Videos: permite compartir videos alojados en Youtube",
         "Cambio de contraseña del administrador.",
@@ -384,7 +436,7 @@
         "assets/img/portafolio/2v/blog.png",
         "assets/img/portafolio/2v/contactanos.png"
       ],
-      "autoadministrables": [
+      "administrables": [
         "Blog: artículos con diversas categorías",
         "Videos: permite compartir videos alojados en Youtube.",
         "Testimonios",
@@ -408,47 +460,7 @@
         "js.jpg"
       ]
     },
-    {
-      "name": "belizabethmontilla.com",
-      "link": null,
-      "description": "Web Blog / Videos",
-      "description_lg": [
-        "belizabethmontilla.com es un sitio web diseñado y desarrollado para ofrecer servicios relacionados a la psicología."
-      ],
-      "images": [
-        "assets/img/portafolio/belizabeth/home.png",
-        "assets/img/portafolio/belizabeth/videos-home.png",
-        "assets/img/portafolio/belizabeth/video-play-home.png",
-        "assets/img/portafolio/belizabeth/services.jpg",
-        "assets/img/portafolio/belizabeth/sobre-mi.png",
-        "assets/img/portafolio/belizabeth/blog.jpg",
-        "assets/img/portafolio/belizabeth/article.jpg",
-        "assets/img/portafolio/belizabeth/testimonios.png",
-        "assets/img/portafolio/belizabeth/admin-articles.png",
-        "assets/img/portafolio/belizabeth/editar-article.png",
-        "assets/img/portafolio/belizabeth/add-video.png",
-        "assets/img/portafolio/belizabeth/admin-videos.png"
-      ],
-      "autoadministrables": [
-        "Blog:  artículos con diversas categorías",
-        "Videos: permite compartir videos alojados en Youtube",
-        "Cambio de contraseña del administrador."
-      ],
-      "main_technologies": [
-        "angular.jpg",
-        "laravel.jpg",
-        "mysql.jpg",
-        "css.jpg",
-        "bootstrap.jpg"
-      ],
-      "technologies": [
-        "angular.jpg",
-        "laravel.jpg",
-        "mysql.jpg",
-        "css.jpg",
-        "bootstrap.jpg"
-      ]
-    },
+
     {
       "name": "sapienciaweb.com",
       "link": "https://sapienciaweb.com/",
@@ -464,7 +476,7 @@
         "assets/img/portafolio/sapiencia/portafolio-modal.png",
         "assets/img/portafolio/sapiencia/contactanos.png"
       ],
-      "autoadministrables": [
+      "administrables": [
         "Portafolio: permite visualizar los últimos trabajos realizados por la marca."
       ],
       "main_technologies": [

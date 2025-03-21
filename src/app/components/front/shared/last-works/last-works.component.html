@@ -24,7 +24,7 @@
         <div class="card-footer bg-white px-2">
           <h6 class="m-0 text-gold">{{ work.name }}</h6>
 
-          <p style="font-size: 13px;" class="m-0">{{ work.description }}</p>
+          <p style="font-size: 13px" class="m-0">{{ work.description }}</p>
 
           <div class="technologies-card row m-auto" style="">
             <div class="col-12 py-3">
@@ -148,17 +148,20 @@
       </p>
     </div>
 
+    <div *ngIf="selected?.features && selected?.features.length != 0">
+      <br />
+      <h5 style="font-weight: bold">Caracteristicas:</h5>
+      <p class="text-justify m-0" *ngFor="let feature of selected.features">
+        <i class="fas fa-check"></i> {{ feature }}
+      </p>
+    </div>
+
     <div
-      *ngIf="
-        selected?.autoadministrables && selected?.autoadministrables.length != 0
-      "
+      *ngIf="selected?.administrables && selected?.administrables.length != 0"
     >
       <br />
-      <h5 style="font-weight: bold">Secciones Autoadministrables:</h5>
-      <p
-        class="text-justify m-0"
-        *ngFor="let auto of selected.autoadministrables"
-      >
+      <h5 style="font-weight: bold">Secciones Administrables:</h5>
+      <p class="text-justify m-0" *ngFor="let auto of selected.administrables">
         <i class="fas fa-check"></i> {{ auto }}
       </p>
     </div>
