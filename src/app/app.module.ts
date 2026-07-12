@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/front/shared/navbar/navbar.component';
+import { NavbarEdwarComponent } from './components/front/shared/navbar-edwar/navbar-edwar.component';
 import { HomeComponent } from './components/front/home/home.component';
 import { ContactUsComponent } from './components/front/contact-us/contact-us.component';
 import { PortfolioComponent } from './components/front/portfolio/portfolio.component';
@@ -33,6 +34,7 @@ import { ImgSmPipe } from './pipes/img-sm.pipe';
   declarations: [
     AppComponent,
     NavbarComponent,
+    NavbarEdwarComponent,
     HomeComponent,
     ContactUsComponent,
     PortfolioComponent,

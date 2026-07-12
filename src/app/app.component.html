@@ -1,6 +1,7 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="!showEdwarNavbar"></app-navbar>
+<app-navbar-edwar *ngIf="showEdwarNavbar"></app-navbar-edwar>
 <div style="min-height:55vh;">
     <router-outlet></router-outlet>
 </div>
 
-<app-footer></app-footer>
+<app-footer *ngIf="!showEdwarNavbar"></app-footer>

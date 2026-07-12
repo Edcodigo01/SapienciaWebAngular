@@ -1,0 +1,243 @@
+{
+  "works": [
+    {
+      "name": "Asistente virtual IA",
+      "link": null,
+      "link_demo": "https://asistente-ia.sapienciaweb.com/",
+      "description": "Asistente virtual IA | RAG | Embeddings | LLM",
+      "description_lg": [
+        "Asistente virtual que permite realizar consultas sobre servicios por su nombre o a partir de una necesidad específica. Mantiene el contexto de la conversación, permite hacer referencia a servicios mencionados previamente, comparar opciones y procesar múltiples consultas en una sola frase."
+      ],
+      "video_url": "https://youtu.be/cWOL3V8Ny9U?si=lmnWd6uV2pca49R0",
+      "images": [
+        "assets/img/portafolio/asistente-ia/1.jpg"
+      ],
+      "features": [
+        "Detección automática de intenciones.",
+        "Comprensión de consultas en lenguaje natural.",
+        "Arquitectura basada en IA, RAG, embeddings y LLM.",
+        "Respuestas generadas exclusivamente con información registrada en el sistema.",
+        "Consulta de precios, duración, disponibilidad y requisitos de los servicios.",
+        "Información detallada de los servicios.",
+        "Recomendación de servicios según la necesidad expresada por el usuario.",
+        "Comparación de servicios.",
+        "Mantenimiento del contexto conversacional.",
+        "Referencias a servicios previamente mencionados.",
+        "Resolución de referencias por posición, número o nombre del servicio.",
+        "Procesamiento de múltiples consultas en un mismo mensaje.",
+        "Flujo conversacional inteligente mediante reglas e IA.",
+        "Búsqueda semántica mediante embeddings.",
+        "Recuperación de información mediante arquitectura RAG.",
+        "Uso selectivo de LLM para tareas que requieren razonamiento avanzado.",
+        "Segmentación (chunking) de la información para optimizar la recuperación de contexto.",
+        "Arquitectura modular y escalable para incorporar nuevas capacidades."
+      ],
+      "mas": true,
+      "technologies": [
+        "python.jpg",
+        "angular.jpg",
+        "postgres.jpg",
+        "pgvector",
+        "redis",
+        "docker.jpg"
+      ],
+      "other_technologies": [
+        "RAG",
+        "Embeddings",
+        "Chunking de documentos",
+        "LangChain",
+        "LangGraph",
+        "Integración de LLM",
+        "Prompt Engineering"
+      ]
+    },
+    {
+      "name": "PrimeFyre (Colaboración)",
+      "link": "https://primefyre.com",
+      "description": "Plataforma para la planificación y optimización de operaciones de campo.",
+      "description_lg": [
+        "PrimeFyre es una plataforma en la nube especializada en la gestión integral de empresas del sector de residuos y saneamiento. Centraliza procesos como la administración de clientes, la planificación y programación de servicios, la optimización de rutas, la gestión de activos e inventario, la facturación y la generación de reportes, permitiendo a las empresas administrar toda su operación desde un único sistema y mejorar la eficiencia de sus procesos."
+      ],
+      "video_url": "https://youtu.be/E7FDuPja2II?si=f_qzjdFal8tE-CkV",
+      "images": [
+        "assets/img/portafolio/primefyre/1.jpg",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180618.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-175712.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180745.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180705.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-175505.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-181219.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180901.png"
+      ],
+      "features": [
+        "Agenda y programación de eventos de campo.",
+        "Gestión de órdenes de trabajo.",
+        "Despacho de técnicos y vehículos.",
+        "Optimización y recomendación automática de rutas.",
+        "Mapas de rutas para personal y vehículos en campo.",
+        "Gestión de clientes e historial de servicios.",
+        "Gestión de inventario y activos.",
+        "Escaneo de códigos QR y códigos de barras.",
+        "Registro de fotografías y documentos desde campo.",
+        "Captura y actualización de información en tiempo real.",
+        "Registro de coordenadas GPS para ubicaciones de servicio.",
+        "Recordatorios automáticos y programación de servicios recurrentes.",
+        "Facturación y gestión contable.",
+        "Integración con procesamiento de pagos y tarjetas de crédito.",
+        "Aplicación móvil para técnicos y conductores.",
+        "Seguimiento del estado de los trabajos y reportes operativos.",
+        "Y muchas funcionalidades más."
+      ],
+      "technologies": [
+        "laravel.jpg",
+        "mysql.jpg",
+        "docker.jpg",
+        "vue.png",
+        "bootstrap.jpg",
+        "css.jpg",
+        "redis",
+        "git.png"
+      ]
+    },
+    {
+      "name": "keoplanner.com (colaboración)",
+      "link": "https://www.keoplanner.com",
+      "description": "Agenda digital/ Pagos / Whatsapp / más...",
+      "description_lg": [
+        "Agenda digital que organiza las reservas online de manera automática. Posee una gran variead de funciones, entre estas permitir reservas entre horarios disponibles establecidos por cada empresa, recordatorios confirmables por whatsapp y correo electrónico, recibir pagos en linea, cancelar reservas segun la configuración establecida previamente por cada negocio y mucho más."
+      ],
+      "images": [
+        "assets/img/portafolio/keo-planner/1.png",
+        "assets/img/portafolio/keo-planner/2.png",
+        "assets/img/portafolio/keo-planner/3.png",
+        "assets/img/portafolio/keo-planner/4.png",
+        "assets/img/portafolio/keo-planner/5.png"
+      ],
+      "features": [
+        "Gestión de agenda y calendario.",
+        "Reservas de citas en línea 24/7.",
+        "Administración de múltiples profesionales y agendas.",
+        "Gestión de servicios (precios, duración y disponibilidad).",
+        "Gestión de clientes e historial de citas.",
+        "Recordatorios automáticos por WhatsApp y correo electrónico.",
+        "Confirmación de asistencia para reducir inasistencias.",
+        "Gestión de disponibilidad y bloqueo de horarios.",
+        "Reportes y estadísticas de reservas, ventas y servicios.",
+        "Integración con Google Calendar.",
+        "Integración con Google Meet.",
+        "Integración con pasarelas de pago para pagos y anticipos en línea.",
+        "Página de reservas personalizada para clientes.",
+        "Acceso y sincronización de la información en la nube.",
+        "Gestión de pagos y estado de las reservas.",
+        "Configuración de horarios y disponibilidad por profesional.",
+        "Y muchas funcionalidades más."
+      ],
+      "technologies": [
+        "nodejs.jpg",
+        "postgres.jpg",
+        "docker.jpg",
+        "angular.jpg",
+        "bootstrap.jpg",
+        "css.jpg",
+        "git.png"
+      ]
+    },
+    {
+      "name": "Factusis (colaboración)",
+      "link": "https://factusis.com",
+      "description": "Sistema de facturación completo, diseñado para cubrir la mayoría de las necesidades de un negocio.",
+      "description_lg": [
+        "Sistema de facturación integral diseñado para gestionar las principales operaciones comerciales de un negocio. Permite administrar ventas, compras, clientes, proveedores, inventario, facturación, notas de crédito, cuentas por cobrar, reportes y otras funciones esenciales para el control y la administración de la empresa."
+      ],
+      "images": [
+        "assets/img/portafolio/mayasoft/1.jpg",
+        "assets/img/portafolio/mayasoft/2.jpg",
+        "assets/img/portafolio/mayasoft/3.jpg",
+        "assets/img/portafolio/mayasoft/4.jpg",
+        "assets/img/portafolio/mayasoft/5.jpg",
+        "assets/img/portafolio/mayasoft/6.jpg"
+      ],
+      "features": [
+        "Emitir facturas y aplicar impuestos automáticamente.",
+        "Registrar y administrar información de clientes y proveedores.",
+        "Personalizar facturas con logo, datos fiscales y formatos predefinidos.",
+        "Generar facturas electrónicas o en papel (PDF).",
+        "Guardar historiales de compras y ventas.",
+        "Enviar facturas y recordatorios de pago automáticamente.",
+        "Actualizar el stock automáticamente con cada venta.",
+        "Gestionar productos y servicios con precios, descripciones y categorías.",
+        "Alertar sobre productos con bajo inventario.",
+        "Registrar pagos parciales o totales.",
+        "Enviar recordatorios de pagos vencidos a clientes.",
+        "Generar reportes de ventas, compras, impuestos y ganancias.",
+        "Visualizar gráficos y tendencias de ingresos y egresos.",
+        "Exportar datos a Excel, PDF o sistemas contables.",
+        "Extraer datos de identificación a través de APIs de terceros.",
+        "Enviar correos automáticamente para distintos tipos de notificaciones.",
+        "Y más..."
+      ],
+      "technologies": [
+        "laravel.jpg",
+        "mysql.jpg",
+        "vue.png",
+        "bootstrap.jpg",
+        "css.jpg",
+        "git.png"
+      ]
+    },
+    {
+      "name": "masterpaintingflorida.net",
+      "link": "https://www.masterpaintingflorida.net",
+      "description": "Web / Diseño original, moderno y atractivo / Portafolio / Videos / Testimonios",
+      "description_lg": [
+        "masterpaintingflorida.net es un sitio web diseñado y desarrollado para ofrecer servicios de pintura para interiores y exteriores de todo tipo de infraestructuras. Destaca por su diseño original, vistoso y moderno, orientado a transmitir una imagen profesional y atractiva."
+      ],
+      "images": [
+        "assets/img/portafolio/master-painting/home.jpg",
+        "assets/img/portafolio/master-painting/mision_vision.png",
+        "assets/img/portafolio/master-painting/videos.png",
+        "assets/img/portafolio/master-painting/our-works.png",
+        "assets/img/portafolio/master-painting/work-modal.png",
+        "assets/img/portafolio/master-painting/about-us.png",
+        "assets/img/portafolio/master-painting/contact-us.png",
+        "assets/img/portafolio/master-painting/admin.png",
+        "assets/img/portafolio/master-painting/addvideos.png",
+        "assets/img/portafolio/master-painting/addWork.png",
+        "assets/img/portafolio/master-painting/changuepass.png"
+      ],
+      "technologies": [
+        "laravel.jpg",
+        "mysql.jpg",
+        "bootstrap.jpg",
+        "css.jpg",
+        "javascript.jpg",
+        "git.png"
+      ]
+    },
+    {
+      "name": "2v-soluciones.com",
+      "link": "https://2v-soluciones.com/",
+      "description": "Web Blog / Videos / Testimonios",
+      "description_lg": [
+        "Sitio web con blog personal, sección de testimonios, videos e información de la empresa."
+      ],
+      "images": [
+        "assets/img/portafolio/2v/inicio.png",
+        "assets/img/portafolio/2v/servicios.png",
+        "assets/img/portafolio/2v/Nosotros.png",
+        "assets/img/portafolio/2v/testimonios.png",
+        "assets/img/portafolio/2v/videos.png",
+        "assets/img/portafolio/2v/blog.png",
+        "assets/img/portafolio/2v/contactanos.png"
+      ],
+      "technologies": [
+        "laravel.jpg",
+        "mysql.jpg",
+        "bootstrap.jpg",
+        "css.jpg",
+        "javascript.jpg",
+        "git.png"
+      ]
+    }
+  ]
+}

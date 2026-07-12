@@ -1,4 +1,5 @@
+import { environment } from 'src/environments/environment';
+
 export class AppConfing {
-  // public static ENDPOINT='http://localhost/sapienciaBackend/api/';
-  public static ENDPOINT = 'https://sapienciaweb.com/sapienciaBackend/api/';
+  public static ENDPOINT = environment.apiEndpoint;
 }

@@ -1,0 +1,13 @@
+services:
+  sapiencia_web_vps:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sapiencia_web_vps
+    restart: unless-stopped
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true

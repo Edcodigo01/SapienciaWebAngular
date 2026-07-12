@@ -1,48 +1,60 @@
 {
   "works": [
     {
-      "name": "Demo Sistema de Facturación",
-      "link": "https://demostracion-facturacion.sapienciaweb.com/",
-      "description": "Facturación. (Node.js y otra versión Laravel)",
+      "name": "PrimeFyre",
+      "link": null,
+      "description": "Plataforma para la planificación y optimización de operaciones de campo.",
       "description_lg": [
-        "Sistema de demostración, con las funciones básicas de un sistema de facturación, publicado para permitir a cualquier persona realizar pruebas, de tal forma que puedan tener una idea, de la capacidad de desarrollo de nuestra marca."
+        "PrimeFyre es una plataforma en la nube especializada en la gestión integral de empresas del sector de residuos y saneamiento. Centraliza procesos como la administración de clientes, la planificación y programación de servicios, la optimización de rutas, la gestión de activos e inventario, la facturación y la generación de reportes, permitiendo a las empresas administrar toda su operación desde un único sistema y mejorar la eficiencia de sus procesos."
       ],
+      "video_url": "https://youtu.be/E7FDuPja2II?si=f_qzjdFal8tE-CkV",
       "images": [
-        "assets/img/portafolio/demostracion-facturacion/image-3-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-2-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-4-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-0-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-1-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-5-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-6-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-7-compressed.jpg"
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180618.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180901.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-181219.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-175712.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-175602.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180745.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180705.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-175505.png"
       ],
-      "administrables": [
-        "Ventas (facturas)",
-        "Productos",
-        "Precios adicionales",
-        "Almacenes",
-        "Clientes",
-        "Datos de empresa"
+      "features": [
+        "Agenda y programación de eventos de campo.",
+        "Gestión de órdenes de trabajo.",
+        "Despacho de técnicos y vehículos.",
+        "Optimización y recomendación automática de rutas.",
+        "Mapas de rutas para personal y vehículos en campo.",
+        "Gestión de clientes e historial de servicios.",
+        "Gestión de inventario y activos.",
+        "Escaneo de códigos QR y códigos de barras.",
+        "Registro de fotografías y documentos desde campo.",
+        "Captura y actualización de información en tiempo real.",
+        "Registro de coordenadas GPS para ubicaciones de servicio.",
+        "Recordatorios automáticos y programación de servicios recurrentes.",
+        "Facturación y gestión contable.",
+        "Integración con procesamiento de pagos y tarjetas de crédito.",
+        "Aplicación móvil para técnicos y conductores.",
+        "Seguimiento del estado de los trabajos y reportes operativos.",
+        "Y muchas funcionalidades más."
       ],
       "main_technologies": [
-        "nodejs.jpg",
+        "vue.png",
         "laravel.jpg",
         "mysql.jpg",
+        "docker.jpg",
         "bootstrap.jpg",
-        "html.jpg",
         "css.jpg"
       ],
       "technologies": [
-        "nodejs.jpg",
+        "vue.png",
         "laravel.jpg",
         "mysql.jpg",
+        "docker.jpg",
         "bootstrap.jpg",
-        "html.jpg",
-        "css.jpg"
+        "css.jpg",
+        "git.png"
       ]
     },
-
     {
       "name": "masterpaintingflorida.net",
       "link": "https://www.masterpaintingflorida.net",
@@ -63,28 +75,22 @@
         "assets/img/portafolio/master-painting/addWork.png",
         "assets/img/portafolio/master-painting/changuepass.png"
       ],
-      "administrables": [
-        "Portafolio: se muestran algunos trabajos realizados por la marca",
-        "Videos: permite compartir videos alojados en Youtube",
-        "Cambio de contraseña del administrador.",
-        "Testimonios"
-      ],
       "main_technologies": [
         "laravel.jpg",
         "mysql.jpg",
         "ajax.jpg",
-        "html.jpg",
-        "css.jpg"
+        "css.jpg",
+        "git.png"
       ],
       "technologies": [
         "laravel.jpg",
         "mysql.jpg",
         "ajax.jpg",
         "jquery.jpg",
-        "html.jpg",
         "css.jpg",
         "bootstrap.jpg",
-        "js.jpg"
+        "js.jpg",
+        "git.png"
       ]
     },
     {
@@ -104,28 +110,22 @@
         "assets/img/portafolio/2v/blog.png",
         "assets/img/portafolio/2v/contactanos.png"
       ],
-      "administrables": [
-        "Blog: artículos con diversas categorías",
-        "Videos: permite compartir videos alojados en Youtube.",
-        "Testimonios",
-        "Cambio de contraseña del administrador."
-      ],
       "main_technologies": [
         "laravel.jpg",
         "mysql.jpg",
         "ajax.jpg",
-        "html.jpg",
-        "css.jpg"
+        "css.jpg",
+        "git.png"
       ],
       "technologies": [
         "laravel.jpg",
         "mysql.jpg",
         "ajax.jpg",
         "jquery.jpg",
-        "html.jpg",
         "css.jpg",
         "bootstrap.jpg",
-        "js.jpg"
+        "js.jpg",
+        "git.png"
       ]
     },
     {
@@ -149,24 +149,21 @@
         "assets/img/portafolio/belizabeth/add-video.png",
         "assets/img/portafolio/belizabeth/admin-videos.png"
       ],
-      "administrables": [
-        "Blog:  artículos con diversas categorías",
-        "Videos: permite compartir videos alojados en Youtube",
-        "Cambio de contraseña del administrador."
-      ],
       "main_technologies": [
         "angular.jpg",
         "laravel.jpg",
         "mysql.jpg",
         "css.jpg",
-        "bootstrap.jpg"
+        "bootstrap.jpg",
+        "git.png"
       ],
       "technologies": [
         "angular.jpg",
         "laravel.jpg",
         "mysql.jpg",
         "css.jpg",
-        "bootstrap.jpg"
+        "bootstrap.jpg",
+        "git.png"
       ]
     },
     {
@@ -184,22 +181,21 @@
         "assets/img/portafolio/sapiencia/portafolio-modal.png",
         "assets/img/portafolio/sapiencia/contactanos.png"
       ],
-      "administrables": [
-        "Portafolio: permite visualizar los últimos trabajos realizados por la marca."
-      ],
       "main_technologies": [
         "angular.jpg",
         "laravel.jpg",
         "mysql.jpg",
         "css.jpg",
-        "bootstrap.jpg"
+        "bootstrap.jpg",
+        "git.png"
       ],
       "technologies": [
         "angular.jpg",
         "laravel.jpg",
         "mysql.jpg",
         "css.jpg",
-        "bootstrap.jpg"
+        "bootstrap.jpg",
+        "git.png"
       ]
     },
     {
@@ -219,68 +215,79 @@
         "assets/img/portafolio/eskadental/add-article.png",
         "assets/img/portafolio/eskadental/admin-cate.png"
       ],
-      "administrables": ["Blog: artículos con diversas categorías"],
       "main_technologies": [
         "laravel.jpg",
         "mysql.jpg",
         "ajax.jpg",
-        "html.jpg",
-        "css.jpg"
+        "css.jpg",
+        "git.png"
       ],
       "technologies": [
         "laravel.jpg",
         "mysql.jpg",
         "ajax.jpg",
         "jquery.jpg",
-        "html.jpg",
         "css.jpg",
         "bootstrap.jpg",
-        "js.jpg"
+        "js.jpg",
+        "git.png"
       ]
     }
   ],
   "works_edwar": [
     {
-      "name": "Demo Sistema de Facturación",
-      "link": "https://demostracion-facturacion.sapienciaweb.com/",
-      "description": "Facturación. (Node.js y otra versión Laravel)",
+      "name": "PrimeFyre",
+      "link": "https://primefyre.com",
+      "description": "Plataforma para la planificación y optimización de operaciones de campo.",
       "description_lg": [
-        "Sistema de demostración, con las funciones básicas de un sistema de facturación, publicado para permitir a cualquier persona realizar pruebas, de tal forma que puedan tener una idea, de la capacidad de desarrollo de nuestra marca."
+        "PrimeFyre es una plataforma en la nube especializada en la gestión integral de empresas del sector de residuos y saneamiento. Centraliza procesos como la administración de clientes, la planificación y programación de servicios, la optimización de rutas, la gestión de activos e inventario, la facturación y la generación de reportes, permitiendo a las empresas administrar toda su operación desde un único sistema y mejorar la eficiencia de sus procesos."
       ],
+      "video_url": "https://youtu.be/E7FDuPja2II?si=f_qzjdFal8tE-CkV",
       "images": [
-        "assets/img/portafolio/demostracion-facturacion/image-3-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-2-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-4-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-0-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-1-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-5-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-6-compressed.jpg",
-        "assets/img/portafolio/demostracion-facturacion/image-7-compressed.jpg"
+        "assets/img/portafolio/primefyre/1.jpg",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180618.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-175712.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180745.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180705.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-175505.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-181219.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180901.png"
       ],
-      "administrables": [
-        "Ventas (facturas)",
-        "Productos",
-        "Precios adicionales",
-        "Almacenes",
-        "Clientes",
-        "Datos de empresa"
+      "features": [
+        "Agenda y programación de eventos de campo.",
+        "Gestión de órdenes de trabajo.",
+        "Despacho de técnicos y vehículos.",
+        "Optimización y recomendación automática de rutas.",
+        "Mapas de rutas para personal y vehículos en campo.",
+        "Gestión de clientes e historial de servicios.",
+        "Gestión de inventario y activos.",
+        "Escaneo de códigos QR y códigos de barras.",
+        "Registro de fotografías y documentos desde campo.",
+        "Captura y actualización de información en tiempo real.",
+        "Registro de coordenadas GPS para ubicaciones de servicio.",
+        "Recordatorios automáticos y programación de servicios recurrentes.",
+        "Facturación y gestión contable.",
+        "Integración con procesamiento de pagos y tarjetas de crédito.",
+        "Aplicación móvil para técnicos y conductores.",
+        "Seguimiento del estado de los trabajos y reportes operativos.",
+        "Y muchas funcionalidades más."
       ],
       "main_technologies": [
-        "nodejs.jpg",
+        "vue.png",
         "laravel.jpg",
-        "angular.jpg",
         "mysql.jpg",
+        "docker.jpg",
         "bootstrap.jpg",
-        "html.jpg"
+        "css.jpg"
       ],
       "technologies": [
-        "nodejs.jpg",
+        "vue.png",
         "laravel.jpg",
-        "angular.jpg",
         "mysql.jpg",
+        "docker.jpg",
         "bootstrap.jpg",
-        "html.jpg",
-        "css.jpg"
+        "css.jpg",
+        "git.png"
       ]
     },
     {
@@ -297,36 +304,47 @@
         "assets/img/portafolio/keo-planner/4.png",
         "assets/img/portafolio/keo-planner/5.png"
       ],
-      "administrables": [
-        "Agenda (reservaciones)",
-        "Profesionales",
-        "Servicios",
-        "Clientes",
-        "Métodos de Pagos",
-        "Reportes",
-        "Empresas"
+      "features": [
+        "Gestión de agenda y calendario.",
+        "Reservas de citas en línea 24/7.",
+        "Administración de múltiples profesionales y agendas.",
+        "Gestión de servicios (precios, duración y disponibilidad).",
+        "Gestión de clientes e historial de citas.",
+        "Recordatorios automáticos por WhatsApp y correo electrónico.",
+        "Confirmación de asistencia para reducir inasistencias.",
+        "Gestión de disponibilidad y bloqueo de horarios.",
+        "Reportes y estadísticas de reservas, ventas y servicios.",
+        "Integración con Google Calendar.",
+        "Integración con Google Meet.",
+        "Integración con pasarelas de pago para pagos y anticipos en línea.",
+        "Página de reservas personalizada para clientes.",
+        "Acceso y sincronización de la información en la nube.",
+        "Gestión de pagos y estado de las reservas.",
+        "Configuración de horarios y disponibilidad por profesional.",
+        "Y muchas funcionalidades más."
       ],
       "main_technologies": [
         "nodejs.jpg",
         "angular.jpg",
         "postgres.jpg",
+        "docker.jpg",
         "bootstrap.jpg",
-        "html.jpg",
         "css.jpg"
       ],
       "technologies": [
         "nodejs.jpg",
         "angular.jpg",
         "postgres.jpg",
+        "docker.jpg",
         "bootstrap.jpg",
-        "html.jpg",
-        "css.jpg"
+        "css.jpg",
+        "git.png"
       ]
     },
     {
       "name": "Factusis (colaboración)",
       "link": "https://factusis.com",
-      "description": "Sistema de facturación muy completo.",
+      "description": "Sistema de facturación.",
       "description_lg": [
         "Sistema que permite gestionar y automatizar la emisión, el control y el registro de facturas para empresas o negocios."
       ],
@@ -337,7 +355,6 @@
         "assets/img/portafolio/mayasoft/4.jpg",
         "assets/img/portafolio/mayasoft/5.jpg",
         "assets/img/portafolio/mayasoft/6.jpg"
-
       ],
       "features": [
         "Emitir facturas y aplicar impuestos automáticamente.",
@@ -362,17 +379,17 @@
         "laravel.jpg",
         "vue.png",
         "mysql.jpg",
-        "html.jpg",
         "css.jpg",
-        "bootstrap.jpg"
+        "bootstrap.jpg",
+        "git.png"
       ],
       "technologies": [
         "laravel.jpg",
         "vue.png",
         "mysql.jpg",
-        "html.jpg",
         "css.jpg",
-        "bootstrap.jpg"
+        "bootstrap.jpg",
+        "git.png"
       ]
     },
     {
@@ -395,28 +412,22 @@
         "assets/img/portafolio/master-painting/addWork.png",
         "assets/img/portafolio/master-painting/changuepass.png"
       ],
-      "administrables": [
-        "Portafolio: se muestran algunos trabajos realizados por la marca",
-        "Videos: permite compartir videos alojados en Youtube",
-        "Cambio de contraseña del administrador.",
-        "Testimonios"
-      ],
       "main_technologies": [
         "laravel.jpg",
         "mysql.jpg",
         "ajax.jpg",
-        "html.jpg",
-        "css.jpg"
+        "css.jpg",
+        "git.png"
       ],
       "technologies": [
         "laravel.jpg",
         "mysql.jpg",
         "ajax.jpg",
         "jquery.jpg",
-        "html.jpg",
         "css.jpg",
         "bootstrap.jpg",
-        "js.jpg"
+        "js.jpg",
+        "git.png"
       ]
     },
     {
@@ -436,31 +447,24 @@
         "assets/img/portafolio/2v/blog.png",
         "assets/img/portafolio/2v/contactanos.png"
       ],
-      "administrables": [
-        "Blog: artículos con diversas categorías",
-        "Videos: permite compartir videos alojados en Youtube.",
-        "Testimonios",
-        "Cambio de contraseña del administrador."
-      ],
       "main_technologies": [
         "laravel.jpg",
         "mysql.jpg",
         "ajax.jpg",
-        "html.jpg",
-        "css.jpg"
+        "css.jpg",
+        "git.png"
       ],
       "technologies": [
         "laravel.jpg",
         "mysql.jpg",
         "ajax.jpg",
         "jquery.jpg",
-        "html.jpg",
         "css.jpg",
         "bootstrap.jpg",
-        "js.jpg"
+        "js.jpg",
+        "git.png"
       ]
     },
-
     {
       "name": "sapienciaweb.com",
       "link": "https://sapienciaweb.com/",
@@ -476,22 +480,21 @@
         "assets/img/portafolio/sapiencia/portafolio-modal.png",
         "assets/img/portafolio/sapiencia/contactanos.png"
       ],
-      "administrables": [
-        "Portafolio: permite visualizar los últimos trabajos realizados por la marca."
-      ],
       "main_technologies": [
         "angular.jpg",
         "laravel.jpg",
         "mysql.jpg",
         "css.jpg",
-        "bootstrap.jpg"
+        "bootstrap.jpg",
+        "git.png"
       ],
       "technologies": [
         "angular.jpg",
         "laravel.jpg",
         "mysql.jpg",
         "css.jpg",
-        "bootstrap.jpg"
+        "bootstrap.jpg",
+        "git.png"
       ]
     }
   ]
