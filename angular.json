@@ -27,7 +27,9 @@
                         "tsConfig": "tsconfig.app.json",
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets"
+                            "src/assets",
+                            "src/robots.txt",
+                            "src/sitemap.xml"
                         ],
                         "styles": [
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -103,7 +105,9 @@
                         "karmaConfig": "karma.conf.js",
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets"
+                            "src/assets",
+                            "src/robots.txt",
+                            "src/sitemap.xml"
                         ],
                         "styles": [
                             "src/styles.css"
@@ -152,7 +156,13 @@
                     "builder": "@nguniversal/builders:prerender",
                     "options": {
                         "routes": [
-                            "/"
+                            "/",
+                            "/servicios-y-planes",
+                            "/nosotros",
+                            "/portafolio",
+                            "/contactanos",
+                            "/edwar-villavicencio",
+                            "/adriana-vargas"
                         ]
                     },
                     "configurations": {

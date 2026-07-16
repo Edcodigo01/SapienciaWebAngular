@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-we-page',
@@ -7,13 +6,5 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./we-page.component.css']
 })
 export class WePageComponent implements OnInit {
-
-  constructor(private titleService: Title) { }
-
-  ngOnInit(): void {
-    this.titleService.setTitle('Nosotros');
-  }
-
+  ngOnInit(): void {}
 }
-
-
