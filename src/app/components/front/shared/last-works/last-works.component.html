@@ -160,8 +160,13 @@
     </div>
   </div>
   <div class="modal-footer p-2">
-    <a *ngIf="selected?.link" href="{{ selected.link }}" target="_blank" class="btn btn-gold mr-auto">
-      Visitar sitio</a>
+    <div class="mr-auto">
+      <a *ngIf="selected?.link_demo" [href]="selected.link_demo" target="_blank" class="btn btn-gold">
+        Demo
+      </a>
+      <a *ngIf="selected?.link" href="{{ selected.link }}" target="_blank" class="btn btn-gold ml-2">
+        Visitar sitio</a>
+    </div>
     <button type="button " class="btn btn-gold" (click)="c('yes')">
       Cerrar
     </button>

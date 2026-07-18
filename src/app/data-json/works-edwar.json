@@ -1,6 +1,54 @@
 {
   "works": [
     {
+      "name": "PrimeFyre (Colaboración)",
+      "link": "https://primefyre.com",
+      "description": "Plataforma para la planificación y optimización de operaciones de campo.",
+      "description_lg": [
+        "PrimeFyre es una plataforma en la nube especializada en la gestión integral de empresas del sector de residuos y saneamiento. Centraliza procesos como la administración de clientes, la planificación y programación de servicios, la optimización de rutas, la gestión de activos e inventario, la facturación y la generación de reportes, permitiendo a las empresas administrar toda su operación desde un único sistema y mejorar la eficiencia de sus procesos."
+      ],
+      "video_url": "https://youtu.be/E7FDuPja2II?si=f_qzjdFal8tE-CkV",
+      "images": [
+        "assets/img/portafolio/primefyre/1.jpg",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180618.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-175712.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180745.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180705.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-175505.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-181219.png",
+        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180901.png"
+      ],
+      "features": [
+        "Agenda y programación de eventos de campo.",
+        "Gestión de órdenes de trabajo.",
+        "Despacho de técnicos y vehículos.",
+        "Optimización y recomendación automática de rutas.",
+        "Mapas de rutas para personal y vehículos en campo.",
+        "Gestión de clientes e historial de servicios.",
+        "Gestión de inventario y activos.",
+        "Escaneo de códigos QR y códigos de barras.",
+        "Registro de fotografías y documentos desde campo.",
+        "Captura y actualización de información en tiempo real.",
+        "Registro de coordenadas GPS para ubicaciones de servicio.",
+        "Recordatorios automáticos y programación de servicios recurrentes.",
+        "Facturación y gestión contable.",
+        "Integración con procesamiento de pagos y tarjetas de crédito.",
+        "Aplicación móvil para técnicos y conductores.",
+        "Seguimiento del estado de los trabajos y reportes operativos.",
+        "Y muchas funcionalidades más."
+      ],
+      "technologies": [
+        "laravel.jpg",
+        "mysql.jpg",
+        "docker.jpg",
+        "vue.png",
+        "bootstrap.jpg",
+        "css.jpg",
+        "redis",
+        "git.png"
+      ]
+    },
+       {
       "name": "Asistente virtual IA",
       "link": null,
       "link_demo": "https://asistente-ia.sapienciaweb.com/",
@@ -49,54 +97,6 @@
         "LangGraph",
         "Integración de LLM",
         "Prompt Engineering"
-      ]
-    },
-    {
-      "name": "PrimeFyre (Colaboración)",
-      "link": "https://primefyre.com",
-      "description": "Plataforma para la planificación y optimización de operaciones de campo.",
-      "description_lg": [
-        "PrimeFyre es una plataforma en la nube especializada en la gestión integral de empresas del sector de residuos y saneamiento. Centraliza procesos como la administración de clientes, la planificación y programación de servicios, la optimización de rutas, la gestión de activos e inventario, la facturación y la generación de reportes, permitiendo a las empresas administrar toda su operación desde un único sistema y mejorar la eficiencia de sus procesos."
-      ],
-      "video_url": "https://youtu.be/E7FDuPja2II?si=f_qzjdFal8tE-CkV",
-      "images": [
-        "assets/img/portafolio/primefyre/1.jpg",
-        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180618.png",
-        "assets/img/portafolio/primefyre/primefyre-2026-06-17-175712.png",
-        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180745.png",
-        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180705.png",
-        "assets/img/portafolio/primefyre/primefyre-2026-06-17-175505.png",
-        "assets/img/portafolio/primefyre/primefyre-2026-06-17-181219.png",
-        "assets/img/portafolio/primefyre/primefyre-2026-06-17-180901.png"
-      ],
-      "features": [
-        "Agenda y programación de eventos de campo.",
-        "Gestión de órdenes de trabajo.",
-        "Despacho de técnicos y vehículos.",
-        "Optimización y recomendación automática de rutas.",
-        "Mapas de rutas para personal y vehículos en campo.",
-        "Gestión de clientes e historial de servicios.",
-        "Gestión de inventario y activos.",
-        "Escaneo de códigos QR y códigos de barras.",
-        "Registro de fotografías y documentos desde campo.",
-        "Captura y actualización de información en tiempo real.",
-        "Registro de coordenadas GPS para ubicaciones de servicio.",
-        "Recordatorios automáticos y programación de servicios recurrentes.",
-        "Facturación y gestión contable.",
-        "Integración con procesamiento de pagos y tarjetas de crédito.",
-        "Aplicación móvil para técnicos y conductores.",
-        "Seguimiento del estado de los trabajos y reportes operativos.",
-        "Y muchas funcionalidades más."
-      ],
-      "technologies": [
-        "laravel.jpg",
-        "mysql.jpg",
-        "docker.jpg",
-        "vue.png",
-        "bootstrap.jpg",
-        "css.jpg",
-        "redis",
-        "git.png"
       ]
     },
     {
