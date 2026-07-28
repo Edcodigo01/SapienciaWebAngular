@@ -80,7 +80,11 @@ export class LastWorksComponent implements OnInit {
     this.modalS.open(this.modalWork, { ariaLabelledBy: 'modal-basic-title' });
   }
 
-  openVideoModal(videoUrl: string) {
+  openVideoModal(videoUrl: string, work?: any) {
+    if (work) {
+      this.selected = work;
+    }
+
     this.selectedVideoUrl = videoUrl;
     this.selectedVideoEmbedUrl = this.buildYoutubeEmbedUrl(videoUrl);
     this.modalS.open(this.modalVideo, {

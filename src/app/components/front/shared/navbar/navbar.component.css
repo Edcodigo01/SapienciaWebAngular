@@ -102,7 +102,9 @@
 }
 
 .main-sm {
-    margin-top: -20px
+    margin-top: -20px;
+    right: 20px;
+    position: absolute;
 }
 
 .main-sm.navbar2 {
@@ -113,6 +115,7 @@
     .bg-cut {
         clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
     }
+
     .bg-cut-white {
         clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
     }
@@ -123,23 +126,29 @@
         padding: 5px 8px 5px 8px;
         font-size: 23px;
     }
+
     .bg-cut {
         clip-path: polygon(0 0, 100% 0, 100% 65%, 0% 100%);
     }
+
     .bg-cut-white {
         clip-path: polygon(0 0, 100% 0, 100% 65%, 0% 100%);
     }
+
     #navbar {
         height: 80px;
     }
+
     .logo-sap {
         height: 65%;
         margin-top: -5px;
     }
+
     .text-sap {
         height: 30px;
         margin-top: -5px;
     }
+
     #navbar-section-links {
         margin-top: -15px;
     }
@@ -155,10 +164,12 @@
     #navbar-section-links {
         width: 60%;
     }
+
     #navbar-section-logo {
         width: 60%;
         justify-content: left;
     }
+
     #navbar {
         height: 70px;
     }
@@ -248,17 +259,24 @@
     .boxChat .card {
         display: none;
     }
+
     .img-whatsapp-2 {
         display: inherit;
     }
+
     .boxChat {
         right: 25px;
         bottom: 25px;
         width: 50px;
     }
+
     .img-whatsapp-2 {
         width: 45px;
         height: 45px;
+    }
+
+    .main-sm a{
+        font-size: 15px !important;
     }
 }
 

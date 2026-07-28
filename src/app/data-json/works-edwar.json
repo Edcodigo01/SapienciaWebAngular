@@ -49,14 +49,14 @@
       ]
     },
        {
-      "name": "Asistente virtual IA",
+      "name": "Asistente virtual IA (Demo)",
       "link": null,
       "link_demo": "https://asistente-ia.sapienciaweb.com/",
       "description": "Asistente virtual IA | RAG | Embeddings | LLM",
       "description_lg": [
         "Asistente virtual que permite realizar consultas sobre servicios por su nombre o a partir de una necesidad específica. Mantiene el contexto de la conversación, permite hacer referencia a servicios mencionados previamente, comparar opciones y procesar múltiples consultas en una sola frase."
       ],
-      "video_url": "https://youtu.be/cWOL3V8Ny9U?si=lmnWd6uV2pca49R0",
+      "video_url": "https://www.youtube.com/watch?v=ldgpf41ATUo&feature=youtu.be",
       "images": [
         "assets/img/portafolio/asistente-ia/1.jpg"
       ],

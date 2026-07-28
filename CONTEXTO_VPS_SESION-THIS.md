@@ -55,6 +55,10 @@ Tambien se quito `dist` de `.dockerignore` para que el build compilado localment
 
 ## Flujo correcto actual para desplegar sapienciaweb.com
 
+Importante:
+Antes de cualquier despliegue al VPS, hay que generar la build en local con `npm run build`.
+Si no existe `dist/sapAngular/browser`, el despliegue no queda completo porque el contenedor de `nginx` depende de esos archivos ya compilados.
+
 ### 1. Compilar localmente
 
 ```bash

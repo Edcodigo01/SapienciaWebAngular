@@ -311,3 +311,15 @@
   line-height: 1.45;
    font-family: "Poppins-regular", sans-serif;
 }
+
+.modal-video-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.modal-video-close {
+  margin: -3px 0 0 !important;
+  padding: 0;
+}
