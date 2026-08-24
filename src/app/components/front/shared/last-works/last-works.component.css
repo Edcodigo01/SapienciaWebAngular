@@ -7,6 +7,10 @@
   border-bottom: 3px var(--gold-b) solid;
 }
 
+.cardWork .work-description {
+  min-height: 77px;
+}
+
 .cardWork .summary-description {
   min-height: 40px;
 }
@@ -24,15 +28,15 @@
   object-fit: contain;
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
   .modal-work .carousel-item {
-    height: 500px;
+    height: 550px;
   }
 }
 
 @media (max-width: 1200px) {
   .modal-work .carousel-item {
-    height: 430px;
+    height: 500px;
   }
 }
 

@@ -1,9 +1,56 @@
 {
   "works": [
     {
+      "name": "Asistente virtual IA (Demo)",
+      "link": null,
+      "link_demo": "https://asistente-ia.sapienciaweb.com/",
+      "video_url": "https://www.youtube.com/watch?v=hbw4fT3JWnQ",
+      "description": "Asistente virtual con IA capaz de comprender lenguaje natural, gestionar el agendamiento y reagendamiento de citas, realizar consultas sobre servicios y mucho más mediante LLM, RAG y embeddings.",
+      "description_lg": [
+        "Asistente conversacional con IA diseñado para comprender solicitudes en lenguaje natural y adaptarse a diferentes escenarios dentro de una conversación. Permite consultar y recomendar servicios, verificar disponibilidad horaria y guiar al usuario durante el agendamiento o reagendamiento de citas, manteniendo el contexto y la continuidad de la conversación."
+      ],
+      "images": [
+        "assets/img/portafolio/asistente-ia/1.jpg"
+      ],
+      "features": [
+        "Detección automática de intenciones y comprensión de lenguaje natural.",
+        "Consulta de servicios, precios, duración, descripción y otros datos disponibles.",
+        "Recomendación de servicios según las necesidades expresadas por el usuario.",
+        "Consulta de disponibilidad por fecha, hora o rangos horarios.",
+        "Agendamiento de citas mediante un flujo conversacional que recopila progresivamente la información necesaria.",
+        "Reagendamiento de citas existentes, permitiendo modificar diferentes datos de la reserva.",
+        "Mantenimiento del contexto y referencias a información mencionada previamente durante la conversación.",
+        "Combinación de reglas de negocio e IA para controlar y validar los diferentes flujos.",
+        "Uso de LLM, RAG y embeddings para comprensión, razonamiento y recuperación semántica de información.",
+        "Búsqueda semántica y recuperación de contexto mediante embeddings.",
+        "Gestión de estado y contexto conversacional mediante Redis.",
+        "Persistencia de información y datos de negocio mediante PostgreSQL.",
+        "Backend desarrollado con NestJS y arquitectura orientada a servicios.",
+        "Integración con modelos de lenguaje mediante API.",
+        "Uso de herramientas especializadas (tools) para ejecutar acciones y consultar información del sistema.",
+        "Arquitectura modular y escalable para incorporar nuevas herramientas, reglas, integraciones y capacidades."
+      ],
+      "mas": true,
+      "technologies": [
+        "nestjs.jpg",
+        "angular.jpg",
+        "postgres.jpg",
+        "pgvector",
+        "redis",
+        "docker.jpg"
+      ],
+      "other_technologies": [
+        "RAG",
+        "Embeddings",
+        "Chunking de documentos",
+        "Integración de LLM",
+        "Prompt Engineering"
+      ]
+    },
+    {
       "name": "PrimeFyre (Colaboración)",
       "link": "https://primefyre.com",
-      "description": "Plataforma para la planificación y optimización de operaciones de campo.",
+      "description": "Plataforma integral para la gestión de operaciones de campo, planificación y optimización de rutas, servicios, clientes, inventario, facturación y seguimiento de técnicos",
       "description_lg": [
         "PrimeFyre es una plataforma en la nube especializada en la gestión integral de empresas del sector de residuos y saneamiento. Centraliza procesos como la administración de clientes, la planificación y programación de servicios, la optimización de rutas, la gestión de activos e inventario, la facturación y la generación de reportes, permitiendo a las empresas administrar toda su operación desde un único sistema y mejorar la eficiencia de sus procesos."
       ],
@@ -46,57 +93,6 @@
         "css.jpg",
         "redis",
         "git.png"
-      ]
-    },
-       {
-      "name": "Asistente virtual IA (Demo)",
-      "link": null,
-      "link_demo": "https://asistente-ia.sapienciaweb.com/",
-      "description": "Asistente virtual IA | RAG | Embeddings | LLM",
-      "description_lg": [
-        "Asistente virtual que permite realizar consultas sobre servicios por su nombre o a partir de una necesidad específica. Mantiene el contexto de la conversación, permite hacer referencia a servicios mencionados previamente, comparar opciones y procesar múltiples consultas en una sola frase."
-      ],
-      "video_url": "https://www.youtube.com/watch?v=ldgpf41ATUo&feature=youtu.be",
-      "images": [
-        "assets/img/portafolio/asistente-ia/1.jpg"
-      ],
-      "features": [
-        "Detección automática de intenciones.",
-        "Comprensión de consultas en lenguaje natural.",
-        "Arquitectura basada en IA, RAG, embeddings y LLM.",
-        "Respuestas generadas exclusivamente con información registrada en el sistema.",
-        "Consulta de precios, duración, disponibilidad y requisitos de los servicios.",
-        "Información detallada de los servicios.",
-        "Recomendación de servicios según la necesidad expresada por el usuario.",
-        "Comparación de servicios.",
-        "Mantenimiento del contexto conversacional.",
-        "Referencias a servicios previamente mencionados.",
-        "Resolución de referencias por posición, número o nombre del servicio.",
-        "Procesamiento de múltiples consultas en un mismo mensaje.",
-        "Flujo conversacional inteligente mediante reglas e IA.",
-        "Búsqueda semántica mediante embeddings.",
-        "Recuperación de información mediante arquitectura RAG.",
-        "Uso selectivo de LLM para tareas que requieren razonamiento avanzado.",
-        "Segmentación (chunking) de la información para optimizar la recuperación de contexto.",
-        "Arquitectura modular y escalable para incorporar nuevas capacidades."
-      ],
-      "mas": true,
-      "technologies": [
-        "python.jpg",
-        "angular.jpg",
-        "postgres.jpg",
-        "pgvector",
-        "redis",
-        "docker.jpg"
-      ],
-      "other_technologies": [
-        "RAG",
-        "Embeddings",
-        "Chunking de documentos",
-        "LangChain",
-        "LangGraph",
-        "Integración de LLM",
-        "Prompt Engineering"
       ]
     },
     {
@@ -145,7 +141,7 @@
     {
       "name": "Factusis (colaboración)",
       "link": "https://factusis.com",
-      "description": "Sistema de facturación completo, diseñado para cubrir la mayoría de las necesidades de un negocio.",
+      "description": "Sistema de facturación integral para gestionar ventas, clientes, productos, inventario, pagos, facturación y muchas otras operaciones de un negocio.",
       "description_lg": [
         "Sistema de facturación integral diseñado para gestionar las principales operaciones comerciales de un negocio. Permite administrar ventas, compras, clientes, proveedores, inventario, facturación, notas de crédito, cuentas por cobrar, reportes y otras funciones esenciales para el control y la administración de la empresa."
       ],

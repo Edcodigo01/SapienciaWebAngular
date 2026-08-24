@@ -22,7 +22,9 @@
         <div class="card-footer bg-white px-2">
           <h6 class="m-0 text-bold">{{ work.name }}</h6>
 
-          <p class="summary-description m-0" style="font-size: 13px">{{ work.description }}</p>
+          <div class="work-description">
+            <p class="summary-description m-0" style="font-size: 13px">{{ work.description }}</p>
+          </div>
 
           <div class="technologies-card technologies-card-preview row m-auto">
             <div class="col-12 py-3">
@@ -106,10 +108,10 @@
       </a>
     </div>
 
-    <h3 style="word-wrap: break-word" class="text-bold mt-2">
+    <h3 style="word-wrap: break-word" class="text-bold mt-2 mb-0">
       {{ selected?.name }}
     </h3>
-    <p class="modal-copy m-0">{{ selected?.description }}</p>
+    <!-- <p class="modal-copy m-0">{{ selected?.description }}</p> -->
     <div *ngIf="selected?.description_lg && selected?.description_lg.length != 0">
       <br />
       <h5>Descripción:</h5>

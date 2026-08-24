@@ -183,6 +183,16 @@
   }
 }
 
+@media (min-width: 1201px) {
+  .cardProfile img {
+    height: 280px;
+  }
+
+  .cardProfile .containter-text {
+    height: 280px;
+  }
+}
+
 @media (max-width: 992px) {
   .cardProfile img {
     width: 180px;
