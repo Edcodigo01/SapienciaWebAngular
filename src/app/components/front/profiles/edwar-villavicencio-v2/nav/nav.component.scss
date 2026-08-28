@@ -1,0 +1,235 @@
+:host {
+  display: block;
+}
+
+.mapa {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 24px 32px 18px;
+  overflow-x: auto;
+  box-sizing: border-box;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 13, 22, 0.98) 0%,
+    rgba(4, 13, 22, 0.94) 82%,
+    rgba(3, 10, 17, 0.6) 92%,
+    rgba(3, 10, 17, 0) 100%
+  );
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .barra {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
+    align-items: center;
+    gap: clamp(12px, 2vw, 32px);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .perfil {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      min-width: 0;
+
+      .nombre {
+        margin: 0;
+        color: var(--white);
+        font-family: var(--head-font);
+        font-size: 20px !important;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: 1.5px;
+        white-space: normal;
+      }
+
+      .titulo {
+        max-width: 430px;
+        margin: 0;
+        color: var(--yellow);
+        font-family: var(--text-font);
+        font-size: 18px;
+        line-height: 1.35;
+        white-space: normal;
+      }
+    }
+
+    .ruta {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      width: 100%;
+      min-width: 0;
+      margin: 0 auto;
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: 8.33%;
+        bottom: 7px;
+        left: 8.33%;
+        height: 1px;
+        background: linear-gradient(90deg, #24577e, #4ba3df, #24577e);
+        box-shadow: 0 0 9px rgba(54, 145, 209, 0.45);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 8.33%;
+        bottom: 6px;
+        left: 8.33%;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          transparent 42%,
+          rgba(157, 220, 255, 0.75) 47%,
+          #effaff 50%,
+          rgba(157, 220, 255, 0.75) 53%,
+          transparent 58%,
+          transparent 100%
+        );
+        background-position: 200% 0;
+        background-size: 200% 100%;
+        filter: drop-shadow(0 0 5px rgba(75, 163, 223, 0.9));
+        animation: route-pulse 6s linear infinite;
+      }
+
+      .nodo {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 11px;
+        cursor: pointer;
+        outline: none;
+
+        .texto {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          min-height: 34px;
+          margin: 0;
+          padding: 0 2px;
+          color: #cbd8e2;
+          font-family: var(--text-font);
+          font-size: clamp(7px, calc(5.5px + 0.45vw), 14px);
+          line-height: 1.15;
+          letter-spacing: clamp(0px, 0.07vw, 1px);
+          text-align: center;
+          white-space: normal;
+          transition: color 0.2s ease, font-size 0.2s ease;
+        }
+
+        .punto {
+          width: 15px;
+          height: 15px;
+          box-sizing: border-box;
+          background: #07131e;
+          border: 2px solid #4ba3df;
+          border-radius: 50%;
+          box-shadow: 0 0 0 4px rgba(75, 163, 223, 0.09), 0 0 12px rgba(75, 163, 223, 0.65);
+          transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        &:hover,
+        &:focus-visible {
+          .texto {
+            color: var(--white);
+          }
+
+          .punto {
+            background: #bfe8ff;
+            border-color: #e7f7ff;
+            box-shadow: 0 0 0 5px rgba(191, 232, 255, 0.12), 0 0 16px rgba(128, 205, 255, 0.8);
+          }
+        }
+
+        &.activo {
+          .texto {
+            color: var(--white);
+            font-size: clamp(11px, calc(9.5px + 0.5vw), 19px);
+          }
+
+          .punto {
+            background: #3f9bd6;
+            border-color: #83c8f2;
+            box-shadow:
+              0 0 0 5px rgba(75, 163, 223, 0.16),
+              0 0 12px rgba(90, 184, 236, 0.85),
+              0 0 25px rgba(39, 126, 184, 0.85);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1100px) {
+    padding: 16px 6px 13px;
+    overflow-x: hidden;
+
+    .barra {
+      .ruta {
+        &::before,
+        &::after {
+          bottom: 6px;
+        }
+
+        .nodo {
+          gap: 7px;
+
+          .texto {
+            min-height: 32px;
+          }
+
+          .punto {
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .barra {
+      grid-template-columns: 1fr;
+
+      .perfil {
+        align-items: center;
+        text-align: center;
+      }
+
+      .ruta {
+        display: none;
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .barra .ruta::after {
+      display: none;
+    }
+  }
+}
+
+.space {
+  width: 100%;
+}
+
+@keyframes route-pulse {
+  to {
+    background-position: -200% 0;
+  }
+}

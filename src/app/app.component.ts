@@ -14,6 +14,7 @@ export class AppComponent implements OnInit, OnDestroy {
   title = 'sapAngular';
   private routerSubscription?: Subscription;
   showEdwarNavbar = false;
+  showGlobalLayout = true;
 
   constructor(
     private readonly router: Router,
@@ -30,8 +31,11 @@ export class AppComponent implements OnInit, OnDestroy {
       .subscribe((event) => {
         const navigation = event as NavigationEnd;
         this.updateNavbarByUrl(navigation.urlAfterRedirects);
+        this.updateLayoutFromRoute();
         this.updateSeoFromRoute();
       });
+
+    this.updateLayoutFromRoute();
   }
 
   ngOnDestroy(): void {
@@ -39,7 +43,17 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private updateNavbarByUrl(url: string): void {
-    this.showEdwarNavbar = url.includes('edwar-villavicencio');
+    this.showEdwarNavbar = url.includes('edwar-villavicencio-ant');
+  }
+
+  private updateLayoutFromRoute(): void {
+    let route = this.activatedRoute;
+
+    while (route.firstChild) {
+      route = route.firstChild;
+    }
+
+    this.showGlobalLayout = !route.snapshot.data.independentLayout;
   }
 
   private updateSeoFromRoute(): void {

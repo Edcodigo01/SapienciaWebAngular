@@ -1,0 +1,114 @@
+<div class="screen">
+  <app-nav [active]="tab" [tabs]="tabs" (tabChange)="setTab($event)"></app-nav>
+
+  <main class="content">
+    <app-about-me
+      *ngIf="tab === 'SOBRE MÍ' || prevTab === 'SOBRE MÍ'"
+      [class.enter]="tab === 'SOBRE MÍ'"
+      [class.exit]="prevTab === 'SOBRE MÍ'"
+    ></app-about-me>
+
+    <app-projects
+      *ngIf="tab === 'PROYECTOS RECIENTES' || prevTab === 'PROYECTOS RECIENTES'"
+      [class.enter]="tab === 'PROYECTOS RECIENTES'"
+      [class.exit]="prevTab === 'PROYECTOS RECIENTES'"
+    ></app-projects>
+
+    <app-technologies
+      *ngIf="tab === 'TECNOLOGÍAS' || prevTab === 'TECNOLOGÍAS'"
+      [class.enter]="tab === 'TECNOLOGÍAS'"
+      [class.exit]="prevTab === 'TECNOLOGÍAS'"
+    ></app-technologies>
+
+    <app-experience
+      *ngIf="tab === 'EXPERIENCIA' || prevTab === 'EXPERIENCIA'"
+      [class.enter]="tab === 'EXPERIENCIA'"
+      [class.exit]="prevTab === 'EXPERIENCIA'"
+    ></app-experience>
+
+    <app-education
+      *ngIf="tab === 'FORMACIÓN' || prevTab === 'FORMACIÓN'"
+      [class.enter]="tab === 'FORMACIÓN'"
+      [class.exit]="prevTab === 'FORMACIÓN'"
+    ></app-education>
+
+    <app-modules
+      *ngIf="tab === 'MÓDULOS DESARROLLADOS' || prevTab === 'MÓDULOS DESARROLLADOS'"
+      [class.enter]="tab === 'MÓDULOS DESARROLLADOS'"
+      [class.exit]="prevTab === 'MÓDULOS DESARROLLADOS'"
+    ></app-modules>
+  </main>
+
+  <div
+    *ngIf="next"
+    class="hint"
+    role="button"
+    tabindex="0"
+    [attr.aria-label]="'Ir a ' + next"
+    (click)="goNext()"
+    (keydown.enter)="goNext()"
+    (keydown.space)="goNext(); $event.preventDefault()"
+  >
+    <span class="hint-text">SIGUIENTE: {{ next }}</span>
+    <span class="down">↓</span>
+  </div>
+</div>
+
+<div class="hud-space hud-space-right" aria-hidden="true">
+  <div class="hud hud-right">
+    <div class="panel panel-main glow-1"></div>
+    <div class="panel panel-small glow-2"></div>
+    <div class="panel panel-tall glow-1"></div>
+    <div class="panel panel-wide glow-2"></div>
+    <div class="panel panel-left glow-3"></div>
+    <div class="panel panel-center glow-3"></div>
+    <div class="panel panel-bottom glow-1"></div>
+    <div class="panel panel-top glow-2"></div>
+    <div class="panel panel-mid glow-3"></div>
+    <div class="panel panel-upper-right glow-1"></div>
+  </div>
+</div>
+
+<div class="pager" aria-hidden="true"></div>
+
+<div class="moves hide">
+  <button *ngIf="prev" class="move prev" type="button">
+    <span class="arrow">←</span>
+    <span class="label">
+      <small>ANTERIOR</small>
+      {{ prev }}
+    </span>
+  </button>
+
+  <button *ngIf="next" class="move next" type="button">
+    <span class="label">
+      <small>SIGUIENTE</small>
+      {{ next }}
+    </span>
+    <span class="arrow">→</span>
+  </button>
+</div>
+
+<div class="keyboard-bg" aria-hidden="true"></div>
+
+<div class="hud-space" aria-hidden="true">
+  <div class="hud hud-left">
+    <div class="panel panel-main glow-1"></div>
+    <div class="panel panel-small glow-2"></div>
+    <div class="panel panel-tall glow-1"></div>
+    <div class="panel panel-wide glow-2"></div>
+    <div class="panel panel-left glow-3"></div>
+    <div class="panel panel-center glow-3"></div>
+    <div class="panel panel-bottom glow-1"></div>
+    <div class="panel panel-top glow-2"></div>
+    <div class="panel panel-mid glow-3"></div>
+    <div class="panel panel-upper-right glow-1"></div>
+  </div>
+</div>
+
+<div class="mini-hud-space" aria-hidden="true">
+  <div class="mini-hud hud hud-left">
+    <div class="panel panel-1 glow-1"></div>
+    <div class="panel panel-2 glow-2"></div>
+  </div>
+</div>

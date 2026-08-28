@@ -37,7 +37,8 @@
         "postgres.jpg",
         "pgvector",
         "redis",
-        "docker.jpg"
+        "docker.jpg",
+        "aws"
       ],
       "other_technologies": [
         "RAG",
@@ -92,7 +93,14 @@
         "bootstrap.jpg",
         "css.jpg",
         "redis",
-        "git.png"
+        "git.png",
+        "aws",
+        "whatsapp",
+        "twilio",
+        "sendgrid",
+        "mapbox",
+        "google maps",
+        "stripe"
       ]
     },
     {
@@ -135,7 +143,11 @@
         "angular.jpg",
         "bootstrap.jpg",
         "css.jpg",
-        "git.png"
+        "git.png",
+        "aws",
+        "whatsapp",
+        "stripe",
+        "mercado pago"
       ]
     },
     {

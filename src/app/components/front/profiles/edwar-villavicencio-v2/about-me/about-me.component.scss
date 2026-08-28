@@ -1,0 +1,55 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.about {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding-top: 60px;
+  text-align: justify;
+
+  &::after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+
+  .photo-wrap {
+    position: relative;
+    float: left;
+    width: 110px;
+    height: 140px;
+    margin: 0 24px 12px 0;
+    overflow: hidden;
+    background: transparent;
+    border: 2px solid rgba(75, 163, 223, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 24px rgba(75, 163, 223, 0.3);
+
+    .photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: var(--white);
+    font-family: var(--text-font);
+    font-size: 18px;
+    line-height: 1.7;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+
+    .text-yellow {
+      color: var(--yellow);
+    }
+  }
+
+  p + p {
+    margin-top: 16px;
+  }
+}

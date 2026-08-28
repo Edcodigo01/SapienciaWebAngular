@@ -19,6 +19,14 @@ import { ServicesPlansComponent } from './components/front/services-plans/servic
 import { WePageComponent } from './components/front/we-page/we-page.component';
 import { HireUsComponent } from './components/front/shared/hire-us/hire-us.component';
 import { EdwarComponent } from './components/front/profiles/edwar/edwar.component';
+import { EdwarVillavicencioV2Component } from './components/front/profiles/edwar-villavicencio-v2/edwar-villavicencio-v2.component';
+import { NavComponent } from './components/front/profiles/edwar-villavicencio-v2/nav/nav.component';
+import { AboutMeComponent } from './components/front/profiles/edwar-villavicencio-v2/about-me/about-me.component';
+import { ProjectsComponent } from './components/front/profiles/edwar-villavicencio-v2/projects/projects.component';
+import { TechnologiesComponent } from './components/front/profiles/edwar-villavicencio-v2/technologies/technologies.component';
+import { ExperienceComponent } from './components/front/profiles/edwar-villavicencio-v2/experience/experience.component';
+import { EducationComponent } from './components/front/profiles/edwar-villavicencio-v2/education/education.component';
+import { ModulesComponent } from './components/front/profiles/edwar-villavicencio-v2/modules/modules.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SwiperModule } from 'swiper/angular';
 import { LastWorksComponent } from './components/front/shared/last-works/last-works.component';
@@ -47,6 +55,14 @@ import { ImgSmPipe } from './pipes/img-sm.pipe';
     ServicesPlansComponent,
     HireUsComponent,
     EdwarComponent,
+    EdwarVillavicencioV2Component,
+    NavComponent,
+    AboutMeComponent,
+    ProjectsComponent,
+    TechnologiesComponent,
+    ExperienceComponent,
+    EducationComponent,
+    ModulesComponent,
     LastWorksComponent,
     AdrianaComponent,
     ImgSmPipe

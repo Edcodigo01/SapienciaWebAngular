@@ -5,6 +5,7 @@ import { HomeComponent } from './components/front/home/home.component';
 import { PortfolioComponent } from './components/front/portfolio/portfolio.component';
 import { AdrianaComponent } from './components/front/profiles/adriana/adriana.component';
 import { EdwarComponent } from './components/front/profiles/edwar/edwar.component';
+import { EdwarVillavicencioV2Component } from './components/front/profiles/edwar-villavicencio-v2/edwar-villavicencio-v2.component';
 import { ServicesPlansComponent } from './components/front/services-plans/services-plans.component';
 import { WePageComponent } from './components/front/we-page/we-page.component';
 
@@ -70,9 +71,23 @@ const routes: Routes = [
     }
   },
   {
-    path: 'edwar-villavicencio',
+    path: 'edwar-villavicencio-ant',
     component: EdwarComponent,
     data: {
+      seo: {
+        title: 'Edwar Villavicencio | Sapiencia Web',
+        description: 'Perfil profesional de Edwar Villavicencio dentro del equipo de Sapiencia Web.',
+        keywords: 'Edwar Villavicencio, Sapiencia Web, perfil profesional',
+        path: '/edwar-villavicencio-ant',
+        type: 'profile'
+      }
+    }
+  },
+  {
+    path: 'edwar-villavicencio',
+    component: EdwarVillavicencioV2Component,
+    data: {
+      independentLayout: true,
       seo: {
         title: 'Edwar Villavicencio | Sapiencia Web',
         description: 'Perfil profesional de Edwar Villavicencio dentro del equipo de Sapiencia Web.',

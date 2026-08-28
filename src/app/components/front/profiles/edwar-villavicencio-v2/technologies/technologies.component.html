@@ -1,0 +1,15 @@
+<section class="technologies">
+  <h2 class="section-title">TECNOLOGÍAS</h2>
+
+  <div class="groups">
+    <article class="group" *ngFor="let group of groups">
+      <h3>{{ group.name }}</h3>
+      <div class="items">
+        <span *ngFor="let technology of group.items" [class.text-only]="group.textOnly">
+          <i *ngIf="!group.textOnly" [class]="getIcon(technology)" aria-hidden="true"></i>
+          {{ technology }}
+        </span>
+      </div>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.education {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  h2 {
+    margin: 0 0 20px;
+    color: var(--yellow);
+    font-family: var(--head-font);
+  }
+
+  .study {
+    width: 100%;
+    text-align: justify;
+  }
+
+  h3 {
+    margin: 0 0 8px;
+    color: var(--white);
+    font-family: var(--head-font);
+    font-size: 22px;
+  }
+
+  p {
+    margin: 0 0 16px;
+    color: var(--white);
+    font-family: var(--text-font);
+    font-size: 18px;
+    line-height: 1.7;
+
+    .text-yellow {
+      color: var(--yellow);
+    }
+  }
+
+  .school {
+    line-height: 1.5;
+  }
+}

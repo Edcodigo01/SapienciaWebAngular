@@ -1,0 +1,142 @@
+<section class="projects">
+  <h2 class="section-title">PROYECTOS RECIENTES</h2>
+
+  <div class="carousel">
+    <div class="side-control previous-control">
+      <button type="button" aria-label="Proyecto anterior" [disabled]="!prevProject" (click)="previous()">
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="card-column">
+      <div class="mini-controls mini-top">
+        <button type="button" aria-label="Proyecto anterior" [disabled]="!prevProject" (click)="previous()">
+          <i class="fas fa-chevron-up" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="cards">
+        <button
+          *ngFor="let project of visibleProjects"
+          class="card"
+          [class.active]="project === selected"
+          type="button"
+          (click)="select(project)"
+        >
+          <span class="card-name">{{ project.name }}</span>
+          <small class="card-description">{{ project.description }}</small>
+          </button>
+      </div>
+
+      <div class="mini-controls mini-bottom">
+        <button type="button" aria-label="Proyecto siguiente" [disabled]="!nextProject" (click)="next()">
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="detail" aria-label="Detalle del proyecto seleccionado">
+      <div class="visual">
+        <div class="gallery">
+          <img *ngIf="imageVisible" [src]="imageUrl" [alt]="selected.name" />
+          <button
+            *ngIf="selected.images.length > 1"
+            class="image-prev"
+            type="button"
+            aria-label="Imagen anterior"
+            (click)="previousImage()"
+          >
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button
+            *ngIf="selected.images.length > 1"
+            class="image-next"
+            type="button"
+            aria-label="Imagen siguiente"
+            (click)="nextImage()"
+          >
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </button>
+          <button
+            *ngIf="selected.video_url && imageIndex === 0"
+            class="video-link"
+            type="button"
+            (click)="openVideo()"
+            aria-label="Ver video en YouTube"
+          >
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="visit">
+          <a
+            *ngIf="selected.link_demo || selected.link"
+            [href]="selected.link_demo || selected.link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ selected.link_demo ? 'PROBAR DEMO' : 'VISITAR SITIO' }}
+            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+          </a>
+          <button
+            *ngIf="selected.video_url"
+            type="button"
+            (click)="openVideo()"
+          >
+            VER VIDEO
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <h4 class="tech-title">Tecnologías de desarrollo</h4>
+        <div class="techs" aria-label="Tecnologías de desarrollo">
+          <span *ngFor="let technology of selected.technologies" class="tech">
+            <i [class]="getIcon(technology)" [title]="technology" aria-hidden="true"></i>
+            <small>{{ getName(technology) }}</small>
+          </span>
+        </div>
+
+        <ng-container *ngIf="selected.other_technologies && selected.other_technologies.length">
+          <h4 class="tech-title">Tecnologías de IA</h4>
+          <div class="techs" aria-label="Tecnologías de inteligencia artificial">
+            <span *ngFor="let technology of selected.other_technologies" class="tech ia">
+              <small>{{ getName(technology) }}</small>
+            </span>
+          </div>
+        </ng-container>
+      </div>
+
+      <div class="info">
+        <h3>{{ selected.name }}</h3>
+        <p>{{ selected.description }}</p>
+        <ul class="features">
+          <li *ngFor="let feature of selected.features">{{ feature }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="side-control next-control">
+      <button type="button" aria-label="Proyecto siguiente" [disabled]="!nextProject" (click)="next()">
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<ng-template #modalVideo let-close="close">
+  <div class="video-modal">
+    <div class="video-head">
+      <h3 id="video-title" class="section-title">VIDEO DEMO</h3>
+      <button type="button" class="video-close" aria-label="Cerrar" (click)="close('close')">&times;</button>
+    </div>
+    <div class="video-frame" *ngIf="selectedVideoEmbedUrl">
+      <iframe
+        [src]="selectedVideoEmbedUrl"
+        title="Video demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,19 @@
+<section class="experience">
+  <h2 class="section-title">EXPERIENCIA</h2>
+
+  <div class="jobs">
+    <article class="job" *ngFor="let item of experiences">
+      <h3><a [href]="item.link" target="_blank" rel="noopener noreferrer">{{ item.title }}</a></h3>
+      <p class="company">{{ item.company }}</p>
+      <p class="meta">{{ item.period }}</p>
+      <p class="meta">{{ item.place }}</p>
+      <p class="description">{{ item.description }}</p>
+      <div class="techs">
+        <span *ngFor="let technology of item.technologies">
+          <i [class]="getIcon(technology)" aria-hidden="true"></i>
+          {{ technology }}
+        </span>
+      </div>
+    </article>
+  </div>
+</section>
