@@ -3,6 +3,7 @@ export interface SeoData {
   description: string;
   keywords?: string;
   path: string;
+  canonicalUrl?: string;
   image?: string;
   type?: 'website' | 'article' | 'profile';
 }

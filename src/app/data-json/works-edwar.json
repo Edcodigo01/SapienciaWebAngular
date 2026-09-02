@@ -5,9 +5,9 @@
       "link": null,
       "link_demo": "https://asistente-ia.sapienciaweb.com/",
       "video_url": "https://www.youtube.com/watch?v=hbw4fT3JWnQ",
-      "description": "Asistente virtual con IA capaz de comprender lenguaje natural, gestionar el agendamiento y reagendamiento de citas, realizar consultas sobre servicios y mucho más mediante LLM, RAG y embeddings.",
+      "description": "Asistente virtual con IA para consultar servicios y gestionar citas mediante lenguaje natural, LLM, RAG y embeddings.",
       "description_lg": [
-        "Asistente conversacional con IA diseñado para comprender solicitudes en lenguaje natural y adaptarse a diferentes escenarios dentro de una conversación. Permite consultar y recomendar servicios, verificar disponibilidad horaria y guiar al usuario durante el agendamiento o reagendamiento de citas, manteniendo el contexto y la continuidad de la conversación."
+        "Demo de un asistente conversacional con IA capaz de interpretar solicitudes en lenguaje natural y mantener el contexto durante toda la interacción. Consulta y recomienda servicios, verifica horarios disponibles y acompaña al usuario en el agendamiento o reagendamiento de citas. Su arquitectura combina reglas de negocio con LLM, RAG, embeddings, búsqueda semántica y herramientas especializadas para recuperar información y ejecutar acciones de forma controlada."
       ],
       "images": [
         "assets/img/portafolio/asistente-ia/1.jpg"
@@ -46,14 +46,15 @@
         "Chunking de documentos",
         "Integración de LLM",
         "Prompt Engineering"
-      ]
+      ],
+      "other_version": ["python"]
     },
     {
       "name": "PrimeFyre (Colaboración)",
       "link": "https://primefyre.com",
-      "description": "Plataforma integral para la gestión de operaciones de campo, planificación y optimización de rutas, servicios, clientes, inventario, facturación y seguimiento de técnicos",
+      "description": "Plataforma para gestionar operaciones de campo, servicios, clientes, rutas, inventario, facturación y equipos técnicos.",
       "description_lg": [
-        "PrimeFyre es una plataforma en la nube especializada en la gestión integral de empresas del sector de residuos y saneamiento. Centraliza procesos como la administración de clientes, la planificación y programación de servicios, la optimización de rutas, la gestión de activos e inventario, la facturación y la generación de reportes, permitiendo a las empresas administrar toda su operación desde un único sistema y mejorar la eficiencia de sus procesos."
+        "PrimeFyre es una plataforma en la nube para empresas de residuos y saneamiento que centraliza clientes, servicios, órdenes de trabajo, activos, inventario, facturación y reportes. Facilita la programación y el despacho de técnicos y vehículos, la optimización y visualización de rutas, el registro de evidencias desde campo y el seguimiento operativo en tiempo real. Su enfoque multi-tenant permite administrar la operación desde un único sistema y mejorar la eficiencia de los procesos."
       ],
       "video_url": "https://youtu.be/E7FDuPja2II?si=f_qzjdFal8tE-CkV",
       "images": [
@@ -106,9 +107,9 @@
     {
       "name": "keoplanner.com (colaboración)",
       "link": "https://www.keoplanner.com",
-      "description": "Agenda digital/ Pagos / Whatsapp / más...",
+      "description": "Agenda digital para pequeñas y medianas empresas que automatiza reservas, disponibilidad, recordatorios, pagos y gestión de citas.",
       "description_lg": [
-        "Agenda digital que organiza las reservas online de manera automática. Posee una gran variead de funciones, entre estas permitir reservas entre horarios disponibles establecidos por cada empresa, recordatorios confirmables por whatsapp y correo electrónico, recibir pagos en linea, cancelar reservas segun la configuración establecida previamente por cada negocio y mucho más."
+        "KeoPlanner es una agenda digital orientada a pequeñas y medianas empresas que automatiza la gestión de reservas en línea y ayuda a optimizar el tiempo y los recursos. Permite configurar servicios, profesionales, horarios y disponibilidad; crear, buscar, reagendar, reasignar o cancelar citas; gestionar clientes y consultar la operación desde una agenda visual. También incorpora recordatorios y confirmaciones por WhatsApp y correo electrónico, páginas de reserva, pagos y anticipos en línea, reportes e integraciones con Google Calendar y Google Meet."
       ],
       "images": [
         "assets/img/portafolio/keo-planner/1.png",
@@ -153,9 +154,9 @@
     {
       "name": "Factusis (colaboración)",
       "link": "https://factusis.com",
-      "description": "Sistema de facturación integral para gestionar ventas, clientes, productos, inventario, pagos, facturación y muchas otras operaciones de un negocio.",
+      "description": "Sistema integral para gestionar facturación, ventas, compras, inventario, clientes, proveedores y pagos.",
       "description_lg": [
-        "Sistema de facturación integral diseñado para gestionar las principales operaciones comerciales de un negocio. Permite administrar ventas, compras, clientes, proveedores, inventario, facturación, notas de crédito, cuentas por cobrar, reportes y otras funciones esenciales para el control y la administración de la empresa."
+        "Factusis es un sistema integral para centralizar las principales operaciones comerciales de un negocio. Permite administrar ventas, compras, clientes, proveedores, productos e inventario, además de emitir facturas, gestionar notas de crédito, cuentas por cobrar y registrar pagos. También incorpora documentos en PDF, reportes, gráficos, exportación de datos, recordatorios de pago e integraciones con servicios externos para mejorar el control comercial, contable y operativo."
       ],
       "images": [
         "assets/img/portafolio/mayasoft/1.jpg",
@@ -196,9 +197,9 @@
     {
       "name": "masterpaintingflorida.net",
       "link": "https://www.masterpaintingflorida.net",
-      "description": "Web / Diseño original, moderno y atractivo / Portafolio / Videos / Testimonios",
+      "description": "Sitio web para una empresa de pintura, con portafolio, videos, testimonios y administración de contenido.",
       "description_lg": [
-        "masterpaintingflorida.net es un sitio web diseñado y desarrollado para ofrecer servicios de pintura para interiores y exteriores de todo tipo de infraestructuras. Destaca por su diseño original, vistoso y moderno, orientado a transmitir una imagen profesional y atractiva."
+        "Sitio web diseñado y desarrollado para presentar los servicios de pintura interior y exterior de Master Painting Florida. Combina una identidad visual moderna con secciones informativas, portafolio de trabajos, videos, testimonios y formularios de contacto. También incluye herramientas de administración para actualizar el contenido y mantener la información del sitio organizada."
       ],
       "images": [
         "assets/img/portafolio/master-painting/home.jpg",
@@ -225,9 +226,9 @@
     {
       "name": "2v-soluciones.com",
       "link": "https://2v-soluciones.com/",
-      "description": "Web Blog / Videos / Testimonios",
+      "description": "Sitio corporativo con presentación de servicios, blog, videos, testimonios y canales de contacto.",
       "description_lg": [
-        "Sitio web con blog personal, sección de testimonios, videos e información de la empresa."
+        "Sitio web corporativo desarrollado para presentar la empresa, sus servicios y su propuesta de valor mediante una navegación clara. Integra secciones institucionales, blog, videos, testimonios y canales de contacto, permitiendo publicar contenido de interés y reforzar la presencia digital del negocio."
       ],
       "images": [
         "assets/img/portafolio/2v/inicio.png",

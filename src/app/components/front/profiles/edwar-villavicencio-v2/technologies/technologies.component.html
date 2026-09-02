@@ -2,7 +2,7 @@
   <h2 class="section-title">TECNOLOGÍAS</h2>
 
   <div class="groups">
-    <article class="group" *ngFor="let group of groups">
+    <article class="group" *ngFor="let group of groups" [class.text-only-group]="group.textOnly">
       <h3>{{ group.name }}</h3>
       <div class="items">
         <span *ngFor="let technology of group.items" [class.text-only]="group.textOnly">

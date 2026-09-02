@@ -49,9 +49,11 @@
     (keydown.enter)="goNext()"
     (keydown.space)="goNext(); $event.preventDefault()"
   >
-    <span class="hint-text">SIGUIENTE: {{ next }}</span>
-    <span class="down">↓</span>
+    <span class="hint-label">SIGUIENTE:</span>
+    <span class="hint-name">{{ next }}</span>
+    <i class="fas fa-arrow-down down" aria-hidden="true"></i>
   </div>
+
 </div>
 
 <div class="hud-space hud-space-right" aria-hidden="true">
@@ -110,5 +112,10 @@
   <div class="mini-hud hud hud-left">
     <div class="panel panel-1 glow-1"></div>
     <div class="panel panel-2 glow-2"></div>
+    <div class="panel panel-3 glow-3"></div>
+    <div class="panel panel-4 glow-1"></div>
+    <div class="panel panel-5 glow-2"></div>
+    <div class="panel panel-7 glow-3"></div>
+    <div class="panel panel-8 glow-1"></div>
   </div>
 </div>

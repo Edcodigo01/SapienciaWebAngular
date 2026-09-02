@@ -1,0 +1,24 @@
+<div
+  class="gallery"
+  [class.large]="large"
+  (touchstart)="startTouch($event)"
+  (touchend)="endTouch($event)"
+  (mousedown)="startDrag($event)"
+  (mouseup)="endDrag($event)"
+>
+  <img *ngIf="imageUrl" [src]="imageUrl" alt="Imagen del proyecto" />
+
+  <button *ngIf="images.length > 1" class="image-prev" type="button" aria-label="Imagen anterior" (click)="previous()">
+    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+  </button>
+  <button *ngIf="images.length > 1" class="image-next" type="button" aria-label="Imagen siguiente" (click)="next()">
+    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+  </button>
+
+  <button *ngIf="showVideo && index === 0" class="video-link" type="button" aria-label="Ver video" (click)="videoClick.emit()">
+    <i class="fab fa-youtube" aria-hidden="true"></i>
+  </button>
+  <button *ngIf="showExpand" class="image-expand" type="button" aria-label="Ampliar imagen" (click)="expandClick.emit()">
+    <i class="fas fa-expand" aria-hidden="true"></i>
+  </button>
+</div>

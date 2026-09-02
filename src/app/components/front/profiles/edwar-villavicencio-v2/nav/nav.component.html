@@ -2,7 +2,8 @@
   <div class="barra">
     <div class="perfil">
       <h1 class="nombre">EDWAR VILLAVICENCIO</h1>
-      <p class="titulo">Ingeniero de Sistemas | Desarrollador Full Stack | Ingeniero de IA/LLM</p>
+      <span class="titulo titulo-largo">Ingeniero de Sistemas | Desarrollador Full Stack | Ingeniero de IA/LLM</span>
+      <span class="titulo titulo-corto">Ing. de Sistemas | Desarrollador Full Stack | Ingeniero de IA/LLM</span>
     </div>
 
     <div class="ruta">
@@ -17,7 +18,7 @@
         (keydown.enter)="select(item)"
         (keydown.space)="select(item); $event.preventDefault()"
       >
-        <p class="texto">{{ item }}</p>
+        <span class="texto">{{ item }}</span>
         <span class="punto"></span>
       </div>
     </div>

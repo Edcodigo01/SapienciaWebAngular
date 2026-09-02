@@ -18,7 +18,7 @@ export class SeoService {
   ) {}
 
   update(seo: SeoData): void {
-    const canonicalUrl = this.buildUrl(seo.path);
+    const canonicalUrl = seo.canonicalUrl ?? this.buildUrl(seo.path);
     const image = seo.image ? this.buildUrl(seo.image) : this.defaultImage;
     const type = seo.type ?? 'website';
 

@@ -23,7 +23,7 @@
           type="button"
           (click)="select(project)"
         >
-          <span class="card-name">{{ project.name }}</span>
+          <span class="card-name">{{ getTitle(project.name) }}</span>
           <small class="card-description">{{ project.description }}</small>
           </button>
       </div>
@@ -35,38 +35,73 @@
       </div>
     </div>
 
-    <div class="detail" aria-label="Detalle del proyecto seleccionado">
-      <div class="visual">
-        <div class="gallery">
-          <img *ngIf="imageVisible" [src]="imageUrl" [alt]="selected.name" />
+    <div class="top-wrap">
+      <div class="top-stage">
+        <button
+          class="top-arrow top-prev"
+          type="button"
+          aria-label="Proyecto anterior"
+          [disabled]="!prevProject"
+          (click)="previous()"
+        >
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+
+        <div
+          #topCarousel
+          class="top-carousel"
+          aria-label="Proyectos disponibles"
+          (mousedown)="startDrag($event)"
+          (mousemove)="drag($event)"
+          (mouseup)="endDrag()"
+          (mouseleave)="endDrag()"
+          (touchstart)="startTouch($event)"
+          (touchend)="endTouch($event)"
+        >
           <button
-            *ngIf="selected.images.length > 1"
-            class="image-prev"
+            *ngFor="let project of visibleProjects"
+            class="card"
+            [class.active]="project === selected"
             type="button"
-            aria-label="Imagen anterior"
-            (click)="previousImage()"
+            (click)="select(project)"
           >
-            <i class="fas fa-chevron-left" aria-hidden="true"></i>
-          </button>
-          <button
-            *ngIf="selected.images.length > 1"
-            class="image-next"
-            type="button"
-            aria-label="Imagen siguiente"
-            (click)="nextImage()"
-          >
-            <i class="fas fa-chevron-right" aria-hidden="true"></i>
-          </button>
-          <button
-            *ngIf="selected.video_url && imageIndex === 0"
-            class="video-link"
-            type="button"
-            (click)="openVideo()"
-            aria-label="Ver video en YouTube"
-          >
-            <i class="fab fa-youtube" aria-hidden="true"></i>
+            <span class="card-name">{{ getTitle(project.name) }}</span>
+            <small class="card-description">{{ project.description }}</small>
           </button>
         </div>
+
+        <button
+          class="top-arrow top-next"
+          type="button"
+          aria-label="Proyecto siguiente"
+          [disabled]="!nextProject"
+          (click)="next()"
+        >
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="project-dots" aria-label="Cantidad de proyectos">
+        <span
+          *ngFor="let project of projects; let index = index"
+          class="project-dot"
+          [class.active]="index === selectedIndex"
+          aria-hidden="true"
+        ></span>
+      </div>
+    </div>
+
+    <div class="detail" aria-label="Detalle del proyecto seleccionado">
+      <div class="visual">
+        <app-project-gallery
+          [images]="selected.images"
+          [(index)]="imageIndex"
+          [cacheKey]="'project=' + selectedIndex"
+          [showVideo]="selected.video_url !== undefined && selected.video_url !== ''"
+          [showExpand]="true"
+          (videoClick)="openVideo()"
+          (expandClick)="openImage()"
+        ></app-project-gallery>
 
         <div class="visit">
           <a
@@ -88,6 +123,9 @@
           </button>
         </div>
 
+        <h3 class="small-name">{{ getTitle(selected.name) }}</h3>
+        <p class="small-description">{{ selectedDescription }}</p>
+
         <h4 class="tech-title">Tecnologías de desarrollo</h4>
         <div class="techs" aria-label="Tecnologías de desarrollo">
           <span *ngFor="let technology of selected.technologies" class="tech">
@@ -95,6 +133,16 @@
             <small>{{ getName(technology) }}</small>
           </span>
         </div>
+
+        <ng-container *ngIf="selected.other_version && selected.other_version.length">
+          <h4 class="tech-title version-title">Otra versión creada con backend:</h4>
+          <div class="techs version-techs" aria-label="Otras versiones">
+            <span *ngFor="let technology of selected.other_version" class="tech">
+              <i [class]="getIcon(technology)" [title]="technology" aria-hidden="true"></i>
+              <small>{{ getName(technology) }}</small>
+            </span>
+          </div>
+        </ng-container>
 
         <ng-container *ngIf="selected.other_technologies && selected.other_technologies.length">
           <h4 class="tech-title">Tecnologías de IA</h4>
@@ -104,15 +152,43 @@
             </span>
           </div>
         </ng-container>
+
+        <h4 class="feature-title small-title">CARACTERÍSTICAS</h4>
+        <ul class="small-features">
+          <li *ngFor="let feature of selected.features">{{ feature }}</li>
+        </ul>
+
       </div>
 
       <div class="info">
-        <h3>{{ selected.name }}</h3>
-        <p>{{ selected.description }}</p>
+        <h3>{{ getTitle(selected.name) }}</h3>
+        <p>{{ selectedDescription }}</p>
+        <h4 class="feature-title">CARACTERÍSTICAS</h4>
         <ul class="features">
           <li *ngFor="let feature of selected.features">{{ feature }}</li>
         </ul>
       </div>
+    </div>
+
+    <div class="project-nav" aria-label="Navegación de proyectos">
+      <button
+        *ngIf="prevProject"
+        type="button"
+        class="project-nav-button previous-project"
+        (click)="previous()"
+      >
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        PROYECTO ANTERIOR
+      </button>
+      <button
+        *ngIf="nextProject"
+        type="button"
+        class="project-nav-button next-project"
+        (click)="next()"
+      >
+        SIGUIENTE PROYECTO
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </button>
     </div>
 
     <div class="side-control next-control">
@@ -125,18 +201,39 @@
 
 <ng-template #modalVideo let-close="close">
   <div class="video-modal">
-    <div class="video-head">
-      <h3 id="video-title" class="section-title">VIDEO DEMO</h3>
-      <button type="button" class="video-close" aria-label="Cerrar" (click)="close('close')">&times;</button>
+    <div class="modal-header video-head">
+      <h3 id="video-title" class="section-title">VIDEO DEMOSTRACIÓN</h3>
+      <button type="button" class="close video-close" aria-label="Cerrar" (click)="close('close')">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-    <div class="video-frame" *ngIf="selectedVideoEmbedUrl">
-      <iframe
-        [src]="selectedVideoEmbedUrl"
-        title="Video demo"
-        frameborder="0"
+    <div class="modal-body video-frame" *ngIf="selectedVideoEmbedUrl">
+      <iframe [src]="selectedVideoEmbedUrl" title="Video demo" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #modalImage let-close="close">
+  <div class="image-modal">
+    <div class="modal-header image-head">
+      <h3 id="image-title" class="section-title">
+        Imagen {{ imageIndex + 1 }} · {{ getTitle(selected.name) }}
+      </h3>
+      <button type="button" class="close image-close" aria-label="Cerrar" (click)="close('close')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body image-frame">
+      <app-project-gallery
+        [images]="selected.images"
+        [(index)]="imageIndex"
+        [cacheKey]="'project=' + selectedIndex"
+        [large]="true"
+        [showVideo]="selected.video_url !== undefined && selected.video_url !== ''"
+        (videoClick)="openVideo()"
+      ></app-project-gallery>
     </div>
   </div>
 </ng-template>

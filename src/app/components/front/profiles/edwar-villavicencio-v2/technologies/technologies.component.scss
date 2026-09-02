@@ -5,7 +5,6 @@
 
 .technologies {
   width: 100%;
-  max-width: 1000px;
   margin: 0 auto;
 
   h2 {
@@ -68,6 +67,17 @@
     }
   }
 
+  @media (max-width: 1024px) {
+    .text-only-group h3 {
+      font-size: 16px;
+    }
+
+    .text-only-group .items span.text-only {
+      padding: 6px 10px;
+      font-size: 18px;
+    }
+  }
+
   @media (max-width: 760px) {
     .items {
       gap: 12px;
@@ -77,6 +87,17 @@
       min-width: 70px;
 
       i { font-size: 34px; }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .text-only-group h3 {
+      font-size: 13px;
+    }
+
+    .text-only-group .items span.text-only {
+      padding: 4px 8px;
+      font-size: 16px;
     }
   }
 }

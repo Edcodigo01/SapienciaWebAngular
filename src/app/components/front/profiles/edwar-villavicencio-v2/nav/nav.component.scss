@@ -9,15 +9,15 @@
   left: 0;
   z-index: 10;
   width: 100%;
-  padding: 24px 32px 18px;
+  padding: 24px 32px 8px;
   overflow-x: auto;
   box-sizing: border-box;
   background: linear-gradient(
     180deg,
-    rgba(4, 13, 22, 0.98) 0%,
-    rgba(4, 13, 22, 0.94) 82%,
-    rgba(3, 10, 17, 0.6) 92%,
-    rgba(3, 10, 17, 0) 100%
+    rgba(4, 13, 22, 0.88) 0%,
+    rgba(4, 13, 22, 0.84) 82%,
+    rgba(3, 10, 17, 0.55) 99%,
+    rgba(3, 10, 17, 0.18) 100%
   );
   scrollbar-width: none;
 
@@ -60,6 +60,10 @@
         line-height: 1.35;
         white-space: normal;
       }
+
+      .titulo-corto {
+        display: none;
+      }
     }
 
     .ruta {
@@ -91,16 +95,16 @@
         background: linear-gradient(
           90deg,
           transparent 0%,
-          transparent 42%,
-          rgba(157, 220, 255, 0.75) 47%,
+          transparent 46%,
+          rgba(157, 220, 255, 0.75) 48%,
           #effaff 50%,
-          rgba(157, 220, 255, 0.75) 53%,
-          transparent 58%,
+          rgba(157, 220, 255, 0.75) 52%,
+          transparent 54%,
           transparent 100%
         );
         background-position: 200% 0;
         background-size: 200% 100%;
-        filter: drop-shadow(0 0 5px rgba(75, 163, 223, 0.9));
+        filter: drop-shadow(0 0 3px rgba(75, 163, 223, 0.7));
         animation: route-pulse 6s linear infinite;
       }
 
@@ -114,6 +118,13 @@
         gap: 11px;
         cursor: pointer;
         outline: none;
+        -webkit-tap-highlight-color: transparent;
+
+        &:focus,
+        &:focus-visible,
+        &:active {
+          outline: none;
+        }
 
         .texto {
           display: flex;
@@ -124,7 +135,7 @@
           padding: 0 2px;
           color: #cbd8e2;
           font-family: var(--text-font);
-          font-size: clamp(7px, calc(5.5px + 0.45vw), 14px);
+          font-size: clamp(12px, calc(10px + 0.45vw), 14px);
           line-height: 1.15;
           letter-spacing: clamp(0px, 0.07vw, 1px);
           text-align: center;
@@ -143,23 +154,24 @@
           transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
-        &:hover,
-        &:focus-visible {
-          .texto {
-            color: var(--white);
-          }
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            .texto {
+              color: var(--white);
+            }
 
-          .punto {
-            background: #bfe8ff;
-            border-color: #e7f7ff;
-            box-shadow: 0 0 0 5px rgba(191, 232, 255, 0.12), 0 0 16px rgba(128, 205, 255, 0.8);
+            .punto {
+              background: #bfe8ff;
+              border-color: #e7f7ff;
+              box-shadow: 0 0 0 5px rgba(191, 232, 255, 0.12), 0 0 16px rgba(128, 205, 255, 0.8);
+            }
           }
         }
 
         &.activo {
           .texto {
             color: var(--white);
-            font-size: clamp(11px, calc(9.5px + 0.5vw), 19px);
+            font-size: clamp(12px, calc(10.5px + 0.5vw), 19px);
           }
 
           .punto {
@@ -176,7 +188,7 @@
   }
 
   @media (max-width: 1100px) {
-    padding: 16px 6px 13px;
+    padding: 16px 6px 6px;
     overflow-x: hidden;
 
     .barra {
@@ -203,16 +215,83 @@
   }
 
   @media (max-width: 1024px) {
+    padding: 5px 6px 4px;
+
     .barra {
       grid-template-columns: 1fr;
+      gap: 4px;
 
       .perfil {
         align-items: center;
+        gap: 2px;
         text-align: center;
+
+        .nombre {
+          font-size: 15px !important;
+        }
+
+        .titulo {
+          max-width: none;
+          font-size: 13px;
+        }
       }
 
       .ruta {
+        display: grid;
+        margin: 1px auto 0;
+
+        .nodo {
+          .texto {
+            font-size: 12px !important;
+          }
+
+          &.activo .texto {
+            font-size: 15px !important;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 415px) {
+    .barra .perfil {
+      .titulo-largo {
         display: none;
+      }
+
+      .titulo-corto {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .barra .ruta .nodo {
+      gap: 5px;
+
+      .texto {
+        min-height: 36px;
+        max-width: 54px;
+        font-size: 12px !important;
+        white-space: normal;
+        transform: rotate(-11deg);
+        transform-origin: center bottom;
+      }
+
+      &.activo .texto {
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .barra .ruta .nodo {
+      .texto {
+        font-size: 12px !important;
+      }
+
+      &.activo .texto {
+        font-size: 14px !important;
       }
     }
   }

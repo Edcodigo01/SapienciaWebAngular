@@ -1,15 +1,40 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, UrlMatcher } from '@angular/router';
 import { ContactUsComponent } from './components/front/contact-us/contact-us.component';
 import { HomeComponent } from './components/front/home/home.component';
 import { PortfolioComponent } from './components/front/portfolio/portfolio.component';
 import { AdrianaComponent } from './components/front/profiles/adriana/adriana.component';
-import { EdwarComponent } from './components/front/profiles/edwar/edwar.component';
 import { EdwarVillavicencioV2Component } from './components/front/profiles/edwar-villavicencio-v2/edwar-villavicencio-v2.component';
 import { ServicesPlansComponent } from './components/front/services-plans/services-plans.component';
 import { WePageComponent } from './components/front/we-page/we-page.component';
 
+const edwarSubdomain = 'edwar-villavicencio.sapienciaweb.com';
+const edwarCanonicalUrl = `https://${edwarSubdomain}`;
+const edwarSeo = {
+  title: 'Edwar Villavicencio | Sapiencia Web',
+  description: 'Perfil profesional de Edwar Villavicencio dentro del equipo de Sapiencia Web.',
+  keywords: 'Edwar Villavicencio, Sapiencia Web, perfil profesional',
+  path: '/edwar-villavicencio',
+  canonicalUrl: edwarCanonicalUrl,
+  type: 'profile'
+};
+
+const edwarSubdomainMatcher: UrlMatcher = (segments) => {
+  const isEdwarSubdomain = typeof window !== 'undefined'
+    && window.location.hostname.toLowerCase() === edwarSubdomain;
+
+  return isEdwarSubdomain && segments.length === 0 ? { consumed: [] } : null;
+};
+
 const routes: Routes = [
+  {
+    matcher: edwarSubdomainMatcher,
+    component: EdwarVillavicencioV2Component,
+    data: {
+      independentLayout: true,
+      seo: edwarSeo
+    }
+  },
   {
     path: '',
     component: HomeComponent,
@@ -71,30 +96,11 @@ const routes: Routes = [
     }
   },
   {
-    path: 'edwar-villavicencio-ant',
-    component: EdwarComponent,
-    data: {
-      seo: {
-        title: 'Edwar Villavicencio | Sapiencia Web',
-        description: 'Perfil profesional de Edwar Villavicencio dentro del equipo de Sapiencia Web.',
-        keywords: 'Edwar Villavicencio, Sapiencia Web, perfil profesional',
-        path: '/edwar-villavicencio-ant',
-        type: 'profile'
-      }
-    }
-  },
-  {
     path: 'edwar-villavicencio',
     component: EdwarVillavicencioV2Component,
     data: {
       independentLayout: true,
-      seo: {
-        title: 'Edwar Villavicencio | Sapiencia Web',
-        description: 'Perfil profesional de Edwar Villavicencio dentro del equipo de Sapiencia Web.',
-        keywords: 'Edwar Villavicencio, Sapiencia Web, perfil profesional',
-        path: '/edwar-villavicencio',
-        type: 'profile'
-      }
+      seo: edwarSeo
     }
   },
   {

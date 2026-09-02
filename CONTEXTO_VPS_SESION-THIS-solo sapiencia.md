@@ -141,6 +141,64 @@ docker exec main-nginx wget -qO- http://sapiencia_web_vps:80 | head
 
 Si responde HTML, el proxy deberia funcionar.
 
+## Subdominio del perfil de Edwar
+
+Estado actual: activo desde el 30 de agosto de 2026.
+
+Se definio el subdominio:
+
+```text
+edwar-villavicencio.sapienciaweb.com
+```
+
+Su unico objetivo es redirigir con HTTP 301 hacia:
+
+```text
+https://sapienciaweb.com/edwar-villavicencio
+```
+
+No requiere otro contenedor ni otra build de Angular. Reutiliza la pagina ya
+publicada y evita servir contenido duplicado bajo dos URL diferentes.
+
+La zona DNS esta administrada en GoDaddy (`ns75.domaincontrol.com` y
+`ns76.domaincontrol.com`). El registro activo es:
+
+```text
+Tipo: A
+Nombre: edwar-villavicencio
+Valor: 32.196.146.120
+TTL: 600 segundos o el valor predeterminado
+```
+
+Configuracion Nginx versionada:
+
+```text
+deploy/vps/edwar-villavicencio.sapienciaweb.com.conf
+```
+
+El certificado independiente de Let's Encrypt esta instalado en:
+
+```text
+/etc/letsencrypt/live/edwar-villavicencio.sapienciaweb.com/
+```
+
+Fue emitido con:
+
+```bash
+sudo certbot certonly --webroot \
+  -w /opt/apps/shared/www \
+  -d edwar-villavicencio.sapienciaweb.com
+```
+
+El vhost completo esta instalado en
+`/opt/apps/nginx/conf.d/edwar-villavicencio.sapienciaweb.com.conf`. Se valido y
+recargo con:
+
+```bash
+docker exec main-nginx nginx -t
+docker exec main-nginx nginx -s reload
+```
+
 ## Archivos importantes de este repositorio
 
 - `Dockerfile`

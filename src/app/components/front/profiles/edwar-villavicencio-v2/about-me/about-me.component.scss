@@ -52,4 +52,64 @@
   p + p {
     margin-top: 16px;
   }
+
+  .contact {
+    margin-top: 34px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(75, 163, 223, 0.45);
+  }
+
+  .contact-title {
+    margin-bottom: 16px !important;
+  }
+
+  .contact-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--white);
+    font-family: var(--text-font);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+
+    i {
+      width: 20px;
+      color: var(--yellow);
+      text-align: center;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--yellow);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    padding-top: 0;
+
+    .contact {
+      padding-top: 20px;
+    }
+
+    .contact-links {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-link {
+      font-size: 15px;
+    }
+  }
 }

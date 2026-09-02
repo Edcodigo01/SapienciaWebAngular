@@ -23,6 +23,7 @@ import { EdwarVillavicencioV2Component } from './components/front/profiles/edwar
 import { NavComponent } from './components/front/profiles/edwar-villavicencio-v2/nav/nav.component';
 import { AboutMeComponent } from './components/front/profiles/edwar-villavicencio-v2/about-me/about-me.component';
 import { ProjectsComponent } from './components/front/profiles/edwar-villavicencio-v2/projects/projects.component';
+import { ProjectGalleryComponent } from './components/front/profiles/edwar-villavicencio-v2/projects/project-gallery.component';
 import { TechnologiesComponent } from './components/front/profiles/edwar-villavicencio-v2/technologies/technologies.component';
 import { ExperienceComponent } from './components/front/profiles/edwar-villavicencio-v2/experience/experience.component';
 import { EducationComponent } from './components/front/profiles/edwar-villavicencio-v2/education/education.component';
@@ -59,6 +60,7 @@ import { ImgSmPipe } from './pipes/img-sm.pipe';
     NavComponent,
     AboutMeComponent,
     ProjectsComponent,
+    ProjectGalleryComponent,
     TechnologiesComponent,
     ExperienceComponent,
     EducationComponent,

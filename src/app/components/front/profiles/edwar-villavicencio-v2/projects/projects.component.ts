@@ -1,6 +1,6 @@
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { Component, ElementRef, TemplateRef, ViewChild } from '@angular/core';
 import works from '../../../../../data-json/works-edwar.json';
 
 interface Project {
@@ -9,10 +9,12 @@ interface Project {
   link_demo?: string;
   video_url?: string;
   description: string;
+  description_lg?: string[];
   images: string[];
   features?: string[];
   technologies: string[];
   other_technologies?: string[];
+  other_version?: string[];
 }
 
 @Component({
@@ -22,17 +24,26 @@ interface Project {
 })
 export class ProjectsComponent {
   @ViewChild('modalVideo') modalVideo?: TemplateRef<any>;
+  @ViewChild('modalImage') modalImage?: TemplateRef<any>;
+  @ViewChild('topCarousel') topCarousel?: ElementRef<HTMLElement>;
+  private imageModalRef?: NgbModalRef;
   projects: Project[] = works.works;
   selectedIndex = 0;
   imageIndex = 0;
-  imageVisible = true;
-  private imageTimer?: ReturnType<typeof setTimeout>;
   selectedVideoEmbedUrl: SafeResourceUrl | null = null;
+  private dragging = false;
+  private dragStartX = 0;
+  private dragStartScroll = 0;
+  private touchStartX: number | null = null;
 
   constructor(private modal: NgbModal, private sanitizer: DomSanitizer) {}
 
   get selected(): Project {
     return this.projects[this.selectedIndex];
+  }
+
+  get selectedDescription(): string {
+    return this.selected.description_lg?.join(' ') || this.selected.description;
   }
 
   get prevProject(): Project | null {
@@ -43,31 +54,31 @@ export class ProjectsComponent {
     return this.selectedIndex < this.projects.length - 1 ? this.projects[this.selectedIndex + 1] : null;
   }
 
-  get imageUrl(): string {
-    const imageIndex = this.imageIndex % this.selected.images.length;
-    return `${this.selected.images[imageIndex]}?project=${this.selectedIndex}&image=${imageIndex}`;
-  }
-
   get visibleProjects(): Project[] {
     const start = Math.min(
       Math.max(this.selectedIndex - 1, 0),
-      Math.max(this.projects.length - 3, 0)
+      Math.max(this.projects.length - 2, 0)
     );
 
     return this.projects.slice(start, start + 3);
   }
 
   select(project: Project): void {
-    this.selectedIndex = this.projects.indexOf(project);
+    const index = this.projects.indexOf(project);
+    if (index === this.selectedIndex) {
+      return;
+    }
+
+    this.selectedIndex = index;
     this.imageIndex = 0;
-    this.refreshImage();
+    this.scrollTop();
   }
 
   previous(): void {
     if (this.selectedIndex > 0) {
       this.selectedIndex -= 1;
       this.imageIndex = 0;
-      this.refreshImage();
+      this.scrollTop();
     }
   }
 
@@ -75,18 +86,56 @@ export class ProjectsComponent {
     if (this.selectedIndex < this.projects.length - 1) {
       this.selectedIndex += 1;
       this.imageIndex = 0;
-      this.refreshImage();
+      this.scrollTop();
     }
   }
 
-  previousImage(): void {
-    this.imageIndex = this.imageIndex > 0 ? this.imageIndex - 1 : this.selected.images.length - 1;
-    this.refreshImage();
+  startDrag(event: MouseEvent): void {
+    if (event.button !== 0 || !this.topCarousel) {
+      return;
+    }
+
+    this.dragging = true;
+    this.dragStartX = event.clientX;
+    this.dragStartScroll = this.topCarousel.nativeElement.scrollLeft;
   }
 
-  nextImage(): void {
-    this.imageIndex = (this.imageIndex + 1) % this.selected.images.length;
-    this.refreshImage();
+  drag(event: MouseEvent): void {
+    if (!this.dragging || !this.topCarousel) {
+      return;
+    }
+
+    event.preventDefault();
+    const distance = event.clientX - this.dragStartX;
+    this.topCarousel.nativeElement.scrollLeft = this.dragStartScroll - distance;
+  }
+
+  endDrag(): void {
+    this.dragging = false;
+  }
+
+  startTouch(event: TouchEvent): void {
+    this.touchStartX = event.touches[0]?.clientX ?? null;
+  }
+
+  endTouch(event: TouchEvent): void {
+    if (this.touchStartX === null) {
+      return;
+    }
+
+    const endX = event.changedTouches[0]?.clientX;
+    const distance = endX === undefined ? 0 : endX - this.touchStartX;
+    this.touchStartX = null;
+
+    if (Math.abs(distance) < 30) {
+      return;
+    }
+
+    if (distance < 0) {
+      this.next();
+    } else {
+      this.previous();
+    }
   }
 
   openVideo(): void {
@@ -94,8 +143,35 @@ export class ProjectsComponent {
       return;
     }
 
+    if (this.imageModalRef) {
+      this.imageModalRef.close();
+      this.imageModalRef = undefined;
+    }
+
     this.selectedVideoEmbedUrl = this.youtubeUrl(this.selected.video_url);
-    this.modal.open(this.modalVideo, { ariaLabelledBy: 'video-title' });
+    this.modal.open(this.modalVideo, {
+      ariaLabelledBy: 'video-title',
+      centered: true,
+      size: 'xl',
+      windowClass: 'video-modal-window'
+    });
+  }
+
+  openImage(): void {
+    if (!this.modalImage || !this.selected.images.length) {
+      return;
+    }
+
+    this.imageModalRef = this.modal.open(this.modalImage, {
+      ariaLabelledBy: 'image-title',
+      centered: true,
+      size: 'xl',
+      windowClass: 'image-modal-window'
+    });
+
+    this.imageModalRef.result.finally(() => {
+      this.imageModalRef = undefined;
+    });
   }
 
   private youtubeUrl(url: string): SafeResourceUrl | null {
@@ -122,6 +198,7 @@ export class ProjectsComponent {
       case 'css.jpg': return 'devicon-css3-plain colored';
       case 'javascript.jpg': return 'devicon-javascript-plain colored';
       case 'nodejs.jpg': return 'devicon-nodejs-plain colored';
+      case 'python': return 'devicon-python-plain colored';
       case 'git.png': return 'devicon-git-plain colored';
       case 'aws':
       case 'aws.jpg': return 'devicon-amazonwebservices-plain colored';
@@ -166,15 +243,11 @@ export class ProjectsComponent {
     return names[name] || name.charAt(0).toUpperCase() + name.slice(1);
   }
 
-  private refreshImage(): void {
-    this.imageVisible = false;
+  getTitle(name: string): string {
+    return name.replace(/\.(com|net|org|io|co)(?=\s|\(|$)/gi, '');
+  }
 
-    if (this.imageTimer) {
-      clearTimeout(this.imageTimer);
-    }
-
-    this.imageTimer = setTimeout(() => {
-      this.imageVisible = true;
-    });
+  private scrollTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
