@@ -22,12 +22,11 @@ export class AboutMeComponent {
       return;
     }
 
-    const message = encodeURIComponent('Saludos, estoy interesado/a en sus servicios de Sapiencia Web');
     const isMobile = this.deviceService.isMobile() || this.deviceService.isTablet();
     const baseUrl = isMobile
       ? 'https://api.whatsapp.com/send'
       : 'https://web.whatsapp.com/send';
 
-    window.open(`${baseUrl}?phone=${this.whatsappNumber}&text=${message}`, '_blank', 'noopener,noreferrer');
+    window.open(`${baseUrl}?phone=${this.whatsappNumber}`, '_blank', 'noopener,noreferrer');
   }
 }
